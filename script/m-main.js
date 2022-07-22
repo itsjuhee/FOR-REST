@@ -1,4 +1,4 @@
-function init(){
+function mobileInit(){
     /*필터 나타나기*/
     $('.m-icon').click(function(){
         $('.m-filter').toggleClass('active');
@@ -80,4 +80,4 @@ function init(){
 }
 
 
-$(window).on('load',init);
+$(window).on('load',mobileInit);
