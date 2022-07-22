@@ -5,8 +5,16 @@
 /*font-family: 'Noto Sans KR', sans-serif;
 font-family: 'Poiret One', cursive;
 font-family: 'Roboto', sans-serif;*/
-
+header.active {
+    transform: translateY(-100%);
+}
+header.white {
+    background-color: #fff;
+    color: #0E141C;
+}
 header {
+    z-index: 100;
+    transition: 0.3s;
     padding: 1%;
     position: relative;
     a {
@@ -86,7 +94,6 @@ footer {
     font-size: 0%; width: 30px; height: 30px;
     background: url(../resource/icon/close.png) no-repeat center;
 }
-
 .location {
     font-size: 0%; width: 30px; height: 30px;
     background: url(../resource/icon/ep_location.png) no-repeat center;
@@ -134,24 +141,18 @@ footer {
 }
 
 // _common.scss
-html, body{
-    margin: 0;
-    
-}
+html, body {margin: 0;}
 
 ul,li,ol{
     list-style: none;
     margin: 0; padding: 0;
 }
 
-h1,h2,h3,h4,p,figure{
-    margin: 0;
-}
+h1,h2,h3,h4,p,figure{margin: 0;}
 
-a{
-    text-decoration: none;
-    cursor: pointer;
-}
+a{text-decoration: none; cursor: pointer;}
+
+img{border: none; vertical-align: top;}
 
 *{
     box-sizing: border-box;
