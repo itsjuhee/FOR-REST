@@ -426,267 +426,63 @@ img {
   font-weight: 300;
 }
 
-main .main-wrap .title {
-  text-align: center;
-  padding: 5% 0;
-  font-family: "Roboto";
-  font-weight: 600;
+body header {
+  color: #0E141C;
 }
-main .main-wrap .title h2 {
-  color: #284257;
-  font-size: 24px;
+body main {
+  width: 100%;
 }
-main .main-wrap .title p {
-  color: #536879;
-  font-size: 16px;
+body main .visual {
+  margin-top: 5vw;
+  position: relative;
 }
-main .main-wrap .main-wrap2 {
-  display: flex;
-  justify-content: space-evenly;
+body main .visual img {
+  width: 100%;
+  z-index: -1;
 }
-main .main-wrap .main-wrap2 .filter {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  width: 17%;
+body main .visual .shadow {
+  width: 100%;
   height: 40%;
-  padding: 1%;
-  flex-shrink: 0;
+  display: block;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
 }
-main .main-wrap .main-wrap2 .filter .area {
-  margin-bottom: 10%;
+body main .visual .visual-text {
+  position: absolute;
+  bottom: 12%;
+  left: 5%;
+  color: #fff;
+  z-index: 3;
 }
-main .main-wrap .main-wrap2 .filter .area .title {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 5%;
-  padding-bottom: 5%;
-  border-bottom: 1px solid #4F4F4F;
+body main .visual .visual-text p {
+  font-size: 1vw;
 }
-main .main-wrap .main-wrap2 .filter .area .title .icon {
-  display: flex;
-  align-items: center;
+body main .visual .visual-text h3 {
+  font-size: 2vw;
+  margin-top: 1%;
+  font-weight: 400;
 }
-main .main-wrap .main-wrap2 .filter .area .title .icon p {
-  font-size: 0%;
-  width: 30px;
-  height: 30px;
-  background: url(../resource/icon/ep_location.png) no-repeat center;
-  margin-right: 10px;
+body main .v-text {
+  margin-top: 6vw;
 }
-main .main-wrap .main-wrap2 .filter .area .title span {
-  font-size: 0%;
-  width: 30px;
-  height: 30px;
-  transform: rotate(90deg);
-  background: url(../resource/icon/arrow.png) no-repeat center;
-  background-size: 50%;
-}
-main .main-wrap .main-wrap2 .filter .area .ul {
-  display: flex;
-  justify-content: space-around;
+body main .v-text p {
   text-align: center;
+  font-size: 1vw;
 }
-main .main-wrap .main-wrap2 .filter .area .ul .main-title {
+body main .v-text p b {
+  font-size: 1.4vw;
   font-weight: 600;
-  border: none;
-  padding: 4px;
 }
-main .main-wrap .main-wrap2 .filter .area .ul li {
-  padding: 10px;
-  font-size: 14px;
+body main .v-text p:nth-of-type(2) {
+  margin: 1.5vw 0;
 }
-main .main-wrap .main-wrap2 .filter .area .ul .active {
-  background-color: #0E141C;
-  color: #fff;
-  border-radius: 15px;
+body main .v-text p:nth-of-type(3) {
+  color: #595959;
 }
-main .main-wrap .main-wrap2 .filter .tema {
-  margin-bottom: 7%;
-}
-main .main-wrap .main-wrap2 .filter .tema .title {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 5%;
-  padding-bottom: 5%;
-  border-bottom: 1px solid #4F4F4F;
-}
-main .main-wrap .main-wrap2 .filter .tema .title .icon {
-  display: flex;
-  align-items: center;
-}
-main .main-wrap .main-wrap2 .filter .tema .title .icon p {
-  font-size: 0%;
-  width: 30px;
-  height: 30px;
-  background: url(../resource/icon/Tema.png) no-repeat center;
-  margin-right: 10px;
-}
-main .main-wrap .main-wrap2 .filter .tema .title span {
-  font-size: 0%;
-  width: 30px;
-  height: 30px;
-  transform: rotate(90deg);
-  background: url(../resource/icon/arrow.png) no-repeat center;
-  background-size: 50%;
-}
-main .main-wrap .main-wrap2 .filter .tema ul {
-  padding-top: 7%;
-  display: flex;
-  justify-content: space-evenly;
-}
-main .main-wrap .main-wrap2 .filter .tema ul li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2%;
-  color: #4F4F4F;
-  font-size: 14px;
-}
-main .main-wrap .main-wrap2 .filter .tema ul li:nth-of-type(1) p {
-  font-size: 0;
-  width: 60px;
-  height: 60px;
-  border: 1px solid #4F4F4F;
-  margin-bottom: 10px;
-  border-radius: 50px;
-  background: url(../resource/icon/camping.png) no-repeat center;
-}
-main .main-wrap .main-wrap2 .filter .tema ul li:nth-of-type(1) p.active {
-  background: url(../resource/icon/camping-w.png) no-repeat center #0E141C;
-}
-main .main-wrap .main-wrap2 .filter .tema ul li:nth-of-type(2) p {
-  font-size: 0;
-  width: 60px;
-  height: 60px;
-  border: 1px solid #4F4F4F;
-  margin-bottom: 10px;
-  border-radius: 50px;
-  background: url(../resource/icon/glamping.png) no-repeat center;
-}
-main .main-wrap .main-wrap2 .filter .tema ul li:nth-of-type(2) p.active {
-  background: url(../resource/icon/glamping-w.png) no-repeat center #0E141C;
-}
-main .main-wrap .main-wrap2 .filter .tema ul li:nth-of-type(3) p {
-  font-size: 0;
-  width: 60px;
-  height: 60px;
-  border: 1px solid #4F4F4F;
-  margin-bottom: 10px;
-  border-radius: 50px;
-  background: url(../resource/icon/caravan.png) no-repeat center;
-}
-main .main-wrap .main-wrap2 .filter .tema ul li:nth-of-type(3) p.active {
-  background: url(../resource/icon/caravan-w.png) no-repeat center #0E141C;
-}
-main .main-wrap .main-wrap2 .filter .tema ul li:nth-of-type(4) p {
-  font-size: 0;
-  width: 60px;
-  height: 60px;
-  border: 1px solid #4F4F4F;
-  margin-bottom: 10px;
-  border-radius: 50px;
-  background: url(../resource/icon/car.png) no-repeat center;
-}
-main .main-wrap .main-wrap2 .filter .tema ul li:nth-of-type(4) p.active {
-  background: url(../resource/icon/car-w.png) no-repeat center #0E141C;
-}
-main .main-wrap .main-wrap2 .filter .subject {
-  margin-bottom: 20%;
-}
-main .main-wrap .main-wrap2 .filter .subject .title {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 5%;
-  padding-bottom: 5%;
-  border-bottom: 1px solid #4F4F4F;
-}
-main .main-wrap .main-wrap2 .filter .subject .title .icon {
-  display: flex;
-  align-items: center;
-}
-main .main-wrap .main-wrap2 .filter .subject .title .icon p {
-  font-size: 0%;
-  width: 30px;
-  height: 30px;
-  background: url(../resource/icon/subject.png) no-repeat center;
-  margin-right: 10px;
-}
-main .main-wrap .main-wrap2 .filter .subject .title span {
-  font-size: 0%;
-  width: 30px;
-  height: 30px;
-  transform: rotate(90deg);
-  background: url(../resource/icon/arrow.png) no-repeat center;
-  background-size: 50%;
-}
-main .main-wrap .main-wrap2 .filter .subject .text .text1 {
-  display: flex;
-  justify-content: center;
-}
-main .main-wrap .main-wrap2 .filter .subject .text .text1 p {
-  width: 80px;
-  height: 30px;
-  border: 1px solid #4F4F4F;
-  border-radius: 5px;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 2%;
-}
-main .main-wrap .main-wrap2 .filter .subject .text .text1 .active {
-  background-color: #0E141C;
-  color: #fff;
-}
-main .main-wrap .main-wrap2 .filter .subject .text .text2 {
-  display: flex;
-  justify-content: center;
-}
-main .main-wrap .main-wrap2 .filter .subject .text .text2 p {
-  width: 60px;
-  height: 30px;
-  border: 1px solid #4F4F4F;
-  border-radius: 5px;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 2%;
-}
-main .main-wrap .main-wrap2 .filter .subject .text .text2 .active {
-  background-color: #0E141C;
-  color: #fff;
-}
-main .main-wrap .main-wrap2 .filter .btn {
-  display: flex;
-  justify-content: center;
-}
-main .main-wrap .main-wrap2 .filter .btn a {
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 40px;
-  background-color: #0E141C;
-  border-radius: 10px;
-  color: #fff;
-  margin: 0 2%;
-}
-main .main-wrap .main-wrap2 .main {
-  width: 70%;
-  margin: 0;
-  flex-shrink: 0;
-  padding-top: 4%;
-}
-main .main-wrap .main-wrap2 .main .thumnail {
+body main .thumnail {
+  width: 69%;
+  margin: 6vw auto;
   padding-bottom: 0%;
-}
-main .main-wrap .main-wrap2 .main .main-btn {
-  display: flex;
-  justify-content: center;
-}
-main .main-wrap .main-wrap2 .main .main-btn p {
-  padding: 50px 10px 100px 10px;
-}/*# sourceMappingURL=search.css.map */
+}/*# sourceMappingURL=web-sub-todaycamping.css.map */

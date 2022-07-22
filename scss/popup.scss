@@ -1,0 +1,193 @@
+@import "_common";
+
+.popup-shadow {
+    width: 100%; height: 100vh;
+    position: fixed; left: 0; top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    .popup-all {
+        position: absolute; top: 50%; left: 50%;
+        transform: translate(-50%,-50%);
+        width: 80vw;
+        background-color: #fff;
+        .popup{
+            width: 100%; 
+            padding: 2%;
+            margin: 0 auto;
+            position: relative;
+            .close{
+                position: absolute;
+                right: 3%; top:5%;
+                z-index: 5;
+            }
+            .popup-arrow{
+                width: 100%; height: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: absolute;
+                top: 0; left: 0;
+                .arrow:nth-of-type(1){
+                    margin-left: 3%;
+                    text-decoration: none; cursor: pointer;
+                }
+                .arrow:nth-of-type(2){
+                    transform: rotate(180deg);
+                    margin-right: 3%;
+                    text-decoration: none; cursor: pointer;
+                }
+            }
+            .m-img {display: none;}
+            .p-main{
+                position: relative;
+                width: 80%;
+                margin: 0 auto;
+                .popup-txt{
+                    width: 100%;
+                    padding: 7% 0;
+                    .popup-title{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        h3{
+                            font-size: 24px;
+                            font-weight: 400;
+                        }
+                        .heart1{
+                            display: block;
+                            font-size: 0%; width: 30px; height: 30px;
+                            background: url(../resource/icon/bi_heart-navy.png) no-repeat center;
+                        }
+                    }
+                    hr{
+                        margin: 2% 0;
+                        background-color: #2842576e;
+                        height: 2px;
+                    }
+                    .popup-main{
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        .popup-left{
+                            width: 50%;
+                            .popup-img{
+                                width: 29vw; height: 20vw;
+                                overflow: hidden;
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                            .left-txt{
+                                h4{
+                                    font-weight: 500;
+                                    margin: 2% 0;
+                                }
+                                p{
+                                    line-height: 30px;
+                                }
+                            }
+                        }
+                        .popup-right{
+                            .right-txt{
+                                h4{
+                                    font-weight: 500;
+                                    margin-bottom: 2%;
+                                }
+                                div{
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: baseline;
+                                    .p{
+                                        width: 20%;
+                                        color: #284257;
+                                        font-weight: 400;
+                                        line-height: 30px;
+                                    }
+                                    span{
+                                        color:#000000;
+                                    }
+                                }
+                                .inst-wrap{
+                                    &::after{content: 'ㆍ';}
+                                    &:last-of-type:after{content: '';}
+                                }
+                                iframe{
+                                    width: 29vw; height: 10vw;
+                                    overflow: hidden;
+                                    margin: 2% 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .popup-shadow {
+        width: 100%; height: 100%;
+        position: static;
+        background-color: none;
+        z-index: 100;
+        .popup-all {
+            width: 100vw;
+            .close {
+                display: none;
+            }
+            .popup .popup-arrow {display: none; width: 0;}
+            .popup {
+                padding: 0; margin: 0;
+                width: 100%;
+                .m-img{
+                    display: block;
+                    overflow: hidden;
+                    width: 100%; height: fit-content;
+                    img {
+                        width: 100%;
+                        transform: translateY(20%);
+                    }
+                }
+                .p-main {
+                    width: 90%;
+                    .popup-txt{
+                        .popup-title {
+                            h3 {font-size: 5vw; font-weight: 500;}
+                            .heart1{
+                                display: block;
+                                font-size: 0%; width: 20px; height: 20px;
+                                background: url(../resource/icon/bi_heart-navy-small.png) no-repeat center;
+                            }
+                        }
+                        .popup-main {
+                            flex-direction: column;
+                            .popup-left {
+                                order: 2;
+                                width: 100%;
+                                .popup-img {
+                                    display: none;
+                                }
+                                .left-txt{
+                                    h4{font-size: 4.5vw; margin-top: 5%;}
+                                    p{font-size: 4vw;}
+                                }
+                            }
+                            .popup-right {
+                                order: 1;
+                                .right-txt {
+                                    h4 {font-size: 4.5vw; margin-top: 5%;}
+                                    span {font-size: 4vw;}
+                                    .p {font-size: 4vw;}
+                                    iframe {width: 100%; height: 20%;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
