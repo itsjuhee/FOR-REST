@@ -1,6 +1,6 @@
 @import "_common";
 
-main{
+.popup{
     width: 80%; 
     padding: 2%;
     margin: 3% auto;
@@ -8,7 +8,7 @@ main{
     .close{
         position: absolute;
         right: 3%; top:5%;
-        // text-decoration: none; cursor: pointer;
+        z-index: 5;
     }
     .popup-arrow{
         width: 100%; height: 100%;
@@ -26,11 +26,9 @@ main{
             margin-right: 3%;
             text-decoration: none; cursor: pointer;
         }
-
     }
-
     .m-img {display: none;}
-    .popup{
+    .p-main{
         position: relative;
         width: 80%;
         margin: 0 auto;
@@ -79,7 +77,6 @@ main{
                         }
                     }
                 }
-
                 .popup-right{
                     .right-txt{
                         h4{
@@ -112,9 +109,7 @@ main{
                         }
                     }
                 }
-
             }
-
         }
     }
 }

@@ -1,4 +1,5 @@
 function init(){
+    
 /*필터 토글*/
     $('.area-arrow').click(function(){
 

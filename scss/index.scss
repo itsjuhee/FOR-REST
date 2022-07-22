@@ -6,7 +6,18 @@ header {
     position: fixed;
     width: 100%;
     color: #fff;
-    .left {display: none;}
+    div {
+        .left {
+            display: none;
+            a {color: #fff;}
+        }
+        .right {
+            a {color: #fff;}
+        }
+    }
+    a{
+        h2 {color: #fff;}
+    }
 }
 
 .title {
