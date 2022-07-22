@@ -57,7 +57,6 @@ $('.text p').on('click', function(){
     $(this).toggleClass('active');
 })
 
-
 }
 
 $(window).on('load',init);

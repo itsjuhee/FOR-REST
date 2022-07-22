@@ -113,7 +113,6 @@
                                     &:last-of-type:after{content: '';}
                                 }
                                 iframe{
-                                    width: 29vw; height: 10vw;
                                     overflow: hidden;
                                     margin: 2% 0;
                                 }
@@ -180,7 +179,7 @@
                                 .right-txt {
                                     h4 {font-size: 4.5vw; margin-top: 5%;}
                                     span {font-size: 4vw;}
-                                    .p {font-size: 4vw;}
+                                    p {font-size: 4vw;}
                                     iframe {width: 100%; height: 20%;}
                                 }
                             }

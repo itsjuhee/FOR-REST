@@ -140,6 +140,7 @@ footer {
 }
 
 // pop up
+.popup-shadow.active {display: block;}
 .popup-shadow {
     width: 100%; height: 100vh;
     position: fixed; left: 0; top: 0;
@@ -254,7 +255,6 @@ footer {
                                     &:last-of-type:after{content: '';}
                                 }
                                 iframe{
-                                    width: 29vw; height: 10vw;
                                     overflow: hidden;
                                     margin: 2% 0;
                                 }
@@ -321,7 +321,7 @@ footer {
                                 .right-txt {
                                     h4 {font-size: 4.5vw; margin-top: 5%;}
                                     span {font-size: 4vw;}
-                                    .p {font-size: 4vw;}
+                                    p {font-size: 4vw;}
                                     iframe {width: 100%; height: 20%;}
                                 }
                             }
