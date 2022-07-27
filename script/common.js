@@ -8,11 +8,7 @@ function login(){
 
         $('.menu a').eq(1).css('display','none'); //LOGIN
         $('.menu a').eq(2).show(); //MY PAGE
-<<<<<<< Updated upstream
-        // $('.menu a').eq(3).show(); //LOGOUT
-=======
         $('.menu a').eq(3).show(); //LOGOUT
->>>>>>> Stashed changes
 
         let bora = sessionStorage.thumbnail;
 

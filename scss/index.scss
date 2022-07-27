@@ -2,25 +2,6 @@
 
 *{font-weight: 400;}
 
-<<<<<<< Updated upstream
-//변경
-header {
-    position: fixed;
-    width: 100%;
-    color: #fff;
-    div {
-        .left {
-            display: none;
-            a {color: #fff;}
-        }
-        .right {
-            a {color: #fff;}
-            a:nth-of-type(3){ //MY PAGE
-                // display: none;
-                right: 2%;
-            }
-            a:nth-of-type(4){ //LOGOUT
-=======
 /*web*/
 .web-main{
     header {
@@ -29,7 +10,6 @@ header {
         color: #fff;
         div {
             .left {
->>>>>>> Stashed changes
                 display: none;
                 a {color: #fff;}
             }
@@ -718,22 +698,6 @@ header {
             }
         }
     }
-<<<<<<< Updated upstream
-
-    //추가
-    .top{
-        position: absolute;
-        width: 50px; height: 50px;
-        background-color: #0E141C;
-        background-image: url("/resource/icon/bx_chevron-up.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        right: 4%; 
-        transform: translateY(-200%);
-        border-radius: 50px;
-        a{
-            font-size: 0;
-=======
     
     /*footer*/
     .f-mobile {
@@ -765,7 +729,6 @@ header {
             font-family: 'Poiret One', cursive;
             font-size: 6vw; font-weight: 300;
             padding: 3% 0% 5% 0%;
->>>>>>> Stashed changes
         }
     }
 }

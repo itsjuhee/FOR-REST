@@ -8,14 +8,12 @@
     
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script defer src="./script/_common.js"></script>
+    <script defer src="./script/common.js"></script>
     <script defer src="./script/my-page.js"></script>
-    <title>Document</title>
+    <title>FOR#REST</title>
 </head>
 <body>
 
-
-    <!--★추가★-->
     <header>
         <a href="./index.html"><h2>FOR#REST</h2></a>
         <div>
@@ -25,7 +23,7 @@
             <nav class="right">
                 <a href="./commnunity.html">COMMUNITY</a>
                 <a href="javascript:loginWithKakao();" >LOGIN</a>
-                <a href="./my-page.html">MY PAGE</a>
+                <!-- <a href="./my-page.html">MY PAGE</a> -->
                 <a href="javascript:kakaoLogout();" >LOGOUT</a>
             </nav>
         </div>
@@ -33,116 +31,109 @@
 
     <main>
 
-        <div class="my-page">
-            <div class="profile">
+        <div class="my-page"> <!--수정/scss 수정-->
                 <span class="thumbnail-img"></span>
-                <p class="id">bora11111</p>
-            </div>
-
-            <div class="count">
-                <p>내 게시물<span>11</span></p>
-                <p>캠핑장<span>343</span></p>
-                <p>커뮤니티<span>24</span></p>
-            </div>
+                <p class="id">길동</p>
+                <p class="hi">님, 반갑습니다.</p>
         </div>
 
         <hr>
 
-        <div class="my-nav">
-            <p>내 게시물</p>
-            <p class="active">캠핑장</p>
-            <p>커뮤니티</p>
+        <div class="thum-wrap"> <!--수정/js수정,css수정-->
+            <div class="my-nav">
+                <p>나의 캠핑 저장함</p>
+            </div>
+
+            <ul class="thumnail">
+                <li>
+                    <div class="thum">
+                        <img src="./resource/img/thum01.jpg" alt="thum">
+                    </div>
+                    <a class="heart">하투</a>
+                    <div class="text">
+                        <h3>별빛 캠핑장</h3>
+                        <p>위치 <span>대전 대덕구 대청로 244길 300</span></p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="thum">
+                        <img src="./resource/img/thum01.jpg" alt="thum">
+                    </div>
+                    <a class="heart">하투</a>
+                    <div class="text">
+                        <h3>별빛 캠핑장</h3>
+                        <p>위치 <span>대전 대덕구 대청로 244길 300</span></p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="thum">
+                        <img src="./resource/img/thum01.jpg" alt="thum">
+                    </div>
+                    <a class="heart">하투</a>
+                    <div class="text">
+                        <h3>별빛 캠핑장</h3>
+                        <p>위치 <span>대전 대덕구 대청로 244길 300</span></p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="thum">
+                        <img src="./resource/img/thum01.jpg" alt="thum">
+                    </div>
+                    <a class="heart">하투</a>
+                    <div class="text">
+                        <h3>별빛 캠핑장</h3>
+                        <p>위치 <span>대전 대덕구 대청로 244길 300</span></p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="thum">
+                        <img src="./resource/img/thum01.jpg" alt="thum">
+                    </div>
+                    <a class="heart">하투</a>
+                    <div class="text">
+                        <h3>별빛 캠핑장</h3>
+                        <p>위치 <span>대전 대덕구 대청로 244길 300</span></p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="thum">
+                        <img src="./resource/img/thum01.jpg" alt="thum">
+                    </div>
+                    <a class="heart">하투</a>
+                    <div class="text">
+                        <h3>별빛 캠핑장</h3>
+                        <p>위치 <span>대전 대덕구 대청로 244길 300</span></p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="thum">
+                        <img src="./resource/img/thum01.jpg" alt="thum">
+                    </div>
+                    <a class="heart">하투</a>
+                    <div class="text">
+                        <h3>별빛 캠핑장</h3>
+                        <p>위치 <span>대전 대덕구 대청로 244길 300</span></p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="thum">
+                        <img src="./resource/img/thum01.jpg" alt="thum">
+                    </div>
+                    <a class="heart">하투</a>
+                    <div class="text">
+                        <h3>별빛 캠핑장</h3>
+                        <p>위치 <span>대전 대덕구 대청로 244길 300</span></p>
+                    </div>
+                </li>
+            </ul>
         </div>
-
-        <ul class="thumnail">
-            <li>
-                <div class="thum">
-                    <img src="./resource/img/thum01.jpg" alt="thum">
-                </div>
-                <a class="heart">하투</a>
-                <div class="text">
-                    <h3>별빛 캠핑장</h3>
-                    <p>위치 <span>대전 대덕구 대청로 244길 300</span></p>
-                </div>
-            </li>
-
-            <li>
-                <div class="thum">
-                    <img src="./resource/img/thum01.jpg" alt="thum">
-                </div>
-                <a class="heart">하투</a>
-                <div class="text">
-                    <h3>별빛 캠핑장</h3>
-                    <p>위치 <span>대전 대덕구 대청로 244길 300</span></p>
-                </div>
-            </li>
-
-            <li>
-                <div class="thum">
-                    <img src="./resource/img/thum01.jpg" alt="thum">
-                </div>
-                <a class="heart">하투</a>
-                <div class="text">
-                    <h3>별빛 캠핑장</h3>
-                    <p>위치 <span>대전 대덕구 대청로 244길 300</span></p>
-                </div>
-            </li>
-
-            <li>
-                <div class="thum">
-                    <img src="./resource/img/thum01.jpg" alt="thum">
-                </div>
-                <a class="heart">하투</a>
-                <div class="text">
-                    <h3>별빛 캠핑장</h3>
-                    <p>위치 <span>대전 대덕구 대청로 244길 300</span></p>
-                </div>
-            </li>
-
-            <li>
-                <div class="thum">
-                    <img src="./resource/img/thum01.jpg" alt="thum">
-                </div>
-                <a class="heart">하투</a>
-                <div class="text">
-                    <h3>별빛 캠핑장</h3>
-                    <p>위치 <span>대전 대덕구 대청로 244길 300</span></p>
-                </div>
-            </li>
-
-            <li>
-                <div class="thum">
-                    <img src="./resource/img/thum01.jpg" alt="thum">
-                </div>
-                <a class="heart">하투</a>
-                <div class="text">
-                    <h3>별빛 캠핑장</h3>
-                    <p>위치 <span>대전 대덕구 대청로 244길 300</span></p>
-                </div>
-            </li>
-
-            <li>
-                <div class="thum">
-                    <img src="./resource/img/thum01.jpg" alt="thum">
-                </div>
-                <a class="heart">하투</a>
-                <div class="text">
-                    <h3>별빛 캠핑장</h3>
-                    <p>위치 <span>대전 대덕구 대청로 244길 300</span></p>
-                </div>
-            </li>
-
-            <li>
-                <div class="thum">
-                    <img src="./resource/img/thum01.jpg" alt="thum">
-                </div>
-                <a class="heart">하투</a>
-                <div class="text">
-                    <h3>별빛 캠핑장</h3>
-                    <p>위치 <span>대전 대덕구 대청로 244길 300</span></p>
-                </div>
-            </li>
-        </ul>
 
         <div class="button">
             <p class="active">1</p>
