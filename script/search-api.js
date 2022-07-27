@@ -2,12 +2,39 @@ let data;
 let doNm = new Set();
 
 
+
+// function abc(e,d){
+//     console.log(d);
+// }
+
+// $.ajax({
+//     url: "http://api.visitkorea.or.kr/openapi/service/rest/GoCamping/basedList",
+//     jsonp: "abc",
+//      dataType: "jsonp",
+//      data: {
+//         ServiceKey: "qqWljV6cxHPr2tcjP5ckf1nfrLkMMrqXb8pHNUfmtPDzSBTVUgVD3M6xIMrE4j9vYjI3fUB5xUhhnM8Jl0AUdA%3D%3D",
+//         numOfRows: "1000",
+//         pageNo:1,
+//         MobileOS:'WIN',
+//         MobileApp:'forest',
+//         _type:'json',
+//         callback:'abc'
+//     },
+//     success:function(d){
+//         console.log(d)
+//     }
+// });
+
+
+
 $.ajax({
     method: "GET",
-    url: "http://api.visitkorea.or.kr/openapi/service/rest/GoCamping/basedList?ServiceKey=qqWljV6cxHPr2tcjP5ckf1nfrLkMMrqXb8pHNUfmtPDzSBTVUgVD3M6xIMrE4j9vYjI3fUB5xUhhnM8Jl0AUdA%3D%3D&numOfRows=1000&pageNo=1&MobileOS=WIN&MobileApp=forest&_type=json",
+    // url: "http://api.visitkorea.or.kr/openapi/service/rest/GoCamping/basedList?ServiceKey=qqWljV6cxHPr2tcjP5ckf1nfrLkMMrqXb8pHNUfmtPDzSBTVUgVD3M6xIMrE4j9vYjI3fUB5xUhhnM8Jl0AUdA%3D%3D&numOfRows=1000&pageNo=1&MobileOS=WIN&MobileApp=forest&_type=json",
+    url:'./script/data.json',
     beforeSend:function(){},
     complete:function(){},
     success:function(data){
+        console.log(data)
 
         // filter
 
@@ -160,7 +187,6 @@ $.ajax({
                 })
             });
 
-            console.log(dd)
             
             // 총 검색 결과 n개
             if($('.main-wrap .title span').html(dd.length)) $('.main-wrap .title p').addClass('active')
