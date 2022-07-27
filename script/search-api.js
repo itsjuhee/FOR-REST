@@ -1,8 +1,6 @@
 let data;
 let doNm = new Set();
 
-
-
 // function abc(e,d){
 //     console.log(d);
 // }
@@ -25,8 +23,6 @@ let doNm = new Set();
 //     }
 // });
 
-
-
 $.ajax({
     method: "GET",
     // url: "http://api.visitkorea.or.kr/openapi/service/rest/GoCamping/basedList?ServiceKey=qqWljV6cxHPr2tcjP5ckf1nfrLkMMrqXb8pHNUfmtPDzSBTVUgVD3M6xIMrE4j9vYjI3fUB5xUhhnM8Jl0AUdA%3D%3D&numOfRows=1000&pageNo=1&MobileOS=WIN&MobileApp=forest&_type=json",
@@ -37,18 +33,11 @@ $.ajax({
         console.log(data)
 
         // filter
-
-        // 광역시도 클릭시 해당 시군구도 출력 - 해당 결과값 썸네일 결과화면 도출
-
         $('.ul .main-title:nth-of-type(1) ul li').on('click', function(){
             let sigunguNm = new Set();
             let thisDo = $(this).html();
             
             $.each(data.response.body.items.item, function(a, b){
-
-                // lctCl, themaEnvrnCl
-                
-
                 if(b.doNm == thisDo && b.sigunguNm != undefined) {                    
                     sigunguNm.add(b.sigunguNm);
                 }
@@ -56,7 +45,6 @@ $.ajax({
             
             let sigunguNmStr = '<li>전체선택</li>';
             for(let i of sigunguNm){
-                // <li>전체선택</li>
                 sigunguNmStr += `<li>${i}</li>`;
             }
             $('.main-title:nth-of-type(2) ul').html( sigunguNmStr )
@@ -87,7 +75,6 @@ $.ajax({
 
         // thumnail
         function printFn(d){
-            
             let thumnail = '';
             $.each(d, function(k,thum){
                 if(thum.firstImageUrl != undefined){
@@ -105,6 +92,7 @@ $.ajax({
             })
             $('.thumnail').html(thumnail);
         }
+
         printFn(data.response.body.items.item);
         
         // 적용하기 버튼
@@ -186,15 +174,16 @@ $.ajax({
                     }catch{}
                 })
             });
-
             
             // 총 검색 결과 n개
             if($('.main-wrap .title span').html(dd.length)) $('.main-wrap .title p').addClass('active')
 
             printFn(dd);
+
             // popup
-            $('.thumnail li').on('click', function(){
-                let code = $(this).data('code');
+            function popupSlide (idx){
+
+                let code = $('.thumnail li').eq(idx).data('code');
                 let pop = data.response.body.items.item.filter(num => num.contentId == code);
     
                 let popup = `<div class="popup-all">
@@ -303,37 +292,33 @@ $.ajax({
                             var url = `https://map.kakao.com/link/search/${adress_name}`;
                             window.open(url, '_blank');
                         });
-    
                         // infowindow.open(map, marker);
     
                         // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
                         map.setCenter(coords);
-    
-                        // function openFullScreen(elem) {
-                        //     var elem = document.getElementById(elem);
-                        //     if(!elem) alert("specify element for full screen.")
-                        //     if (elem.requestFullscreen) {
-                        //         elem.requestFullscreen();
-                        //     } else if (elem.mozRequestFullScreen) { /* Firefox */
-                        //         elem.mozRequestFullScreen();
-                        //     } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-                        //         elem.webkitRequestFullscreen();
-                        //     } else if (elem.msRequestFullscreen) { /* IE/Edge */
-                        //         elem.msRequestFullscreen();
-                        //     }
-                        // }
-                        // openFullScreen(kakao.maps.event.marker)
-                    
                     } 
                 });
                 
+                // popup arrow
+                $('.popup-arrow .arrow').eq(0).on('click', function(){
+                    if(idx>0) idx--;
+                    popupSlide(idx)
+                })
+                $('.popup-arrow .arrow').eq(1).on('click', function(){
+                    if(idx<8) idx++;
+                    popupSlide(idx)
+                })
+
                 // popup close
                 $('.close').on('click', function(){
                     $('.popup-shadow').removeClass('active');
                 });
+            }
+
+            $('.thumnail li').on('click', function(){
+                popupSlide($(this).index());
             });
         })
-
     }
 });
 
