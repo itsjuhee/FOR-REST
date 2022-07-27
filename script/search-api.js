@@ -4,7 +4,7 @@ let doNm = new Set();
 
 $.ajax({
     method: "GET",
-    url: "http://api.visitkorea.or.kr/openapi/service/rest/GoCamping/basedList?ServiceKey=qqWljV6cxHPr2tcjP5ckf1nfrLkMMrqXb8pHNUfmtPDzSBTVUgVD3M6xIMrE4j9vYjI3fUB5xUhhnM8Jl0AUdA==&numOfRows=1000&pageNo=1&MobileOS=WIN&MobileApp=forest&_type=json",
+    url: "http://api.visitkorea.or.kr/openapi/service/rest/GoCamping/basedList?ServiceKey=qqWljV6cxHPr2tcjP5ckf1nfrLkMMrqXb8pHNUfmtPDzSBTVUgVD3M6xIMrE4j9vYjI3fUB5xUhhnM8Jl0AUdA%3D%3D&numOfRows=1000&pageNo=1&MobileOS=WIN&MobileApp=forest&_type=json",
     beforeSend:function(){},
     complete:function(){},
     success:function(data){
