@@ -1,445 +1,453 @@
 @import "_common";
 
-/*header*/
-.mobile{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%; height: 60px;
-    background-color:#0E141C;
-    padding: 2%;
-    a {
-        h2 {
-            color: #fff;
-            font-family: 'Poiret One', cursive;
-            font-size: 20px; font-weight: 300;
-        }
-    }
-    .menu{
-        display: flex;
-        a{
-            color: #fff;
-            font-family: 'Poiret One', cursive;
-            font-size: 12px;
-            padding-right:10px;
-        }
-    }
-}
+
 
 /*filter*/
-body {
+.mobile-main {
     width: 100%;
     position: relative;
-    .hide{
-        overflow: hidden;
-        position: absolute;
-        .m-icon{
-            &.active{
-                right: 90%;
-            }
-            transition: .5s;
-            position: fixed; top: 11.5%; right: 0;
-            width: 40px; height: 40px;
-            background-color:#0E141C;
-            border-radius: 10px 0px 0px 10px;
-            .m-icon-img{
-                font-size: 0; 
-                width: 40px; height: 40px; 
-                background:url(../resource/icon/filter.png) no-repeat center;
-            }
-        }
-        .m-filter{
-            &.active{
-                transform: translateX(10%);
-            }
-            transform: translateX(100%);
-            position: fixed; top: 0; right: 0%;
-            width: 100%; height: 100%;
-            transition: 0.5s;
-            z-index: 999;
-            overflow: auto;
-            .m-content{
-                padding-bottom: 5%;
-                width: 90%;
-                background-color: #fff;
-                h2{
-                    padding: 10% 5%;
-                    font-weight: 400;
-                    font-size: 20px;
-                }
-                .filter{
-                    width: 100%; 
-                    padding: 5%;
-                    flex-shrink: 0;
-                    .area{
-                        margin-bottom: 10%;
-                        .title{
-                            display: flex;
-                            justify-content: space-between;
-                            margin-bottom: 5%;
-                            padding-bottom: 5%;
-                            border-bottom: 1px solid #4F4F4F;
-                            .icon{
-                                display: flex;
-                                align-items: center;
-                                p{
-                                    font-size: 0%; width: 30px; height: 30px;
-                                    background: url(../resource/icon/ep_location.png) no-repeat center;
-                                    margin-right: 10px;
-                                }
-                                h3{}
-                            }
-                            span{
-                                font-size: 0%; width: 30px; height: 30px;
-                                transform: rotate(270deg);
-                                background: url(../resource/icon/arrow.png) no-repeat center;
-                                background-size: 50%;
-                            }
-                        }
-                        .ul{
-                            &.active3{
-                            display: flex;
-                            justify-content: space-around;
-                            }
-        
-                            display: none;
-                            justify-content: space-around;
-                            text-align: center;
-                            .main-title{
-                                font-weight: 600;
-                                border: none;
-                                padding: 4px;
-                            }
-                            li{
-                                padding: 7px;
-                                font-size: 14px;
-                                margin: 3% 0%;
-                            }
-                            .active{
-                                background-color: #0E141C;
-                                color: #fff;
-                                border-radius: 10px;
-                            }
-                        }
-                    }
-                    .tema{
-                        margin-bottom: 7%;
-                        .title{
-                            display: flex;
-                            justify-content: space-between;
-                            margin-bottom: 5%;
-                            padding-bottom: 5%;
-                            border-bottom: 1px solid #4F4F4F;
-                            .icon{
-                                display: flex;
-                                align-items: center;
-                                p{
-                                    font-size: 0%; width: 30px; height: 30px;
-                                    background: url(../resource/icon/Tema.png) no-repeat center;
-                                    margin-right: 10px;
-                                }
-                                h3{}
-                            }
-                            span{
-                                font-size: 0%; width: 30px; height: 30px;
-                                transform: rotate(90deg);
-                                background: url(../resource/icon/arrow.png) no-repeat center;
-                                background-size: 50%;
-                            }
-                        }
-                        ul{
-                            &.active4{
-                                display: none;
-                            }
-                            padding-top: 7%;
-                            justify-content: space-evenly;
-                            display: flex;
-                            li{
-                                &.active {
-                                    color: #0E141C;
-                                    font-weight: 400;
-                                }
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                padding: 2%;
-                                color: #4F4F4F;
-                                font-size: 14px;
-                            }
-                            li:nth-of-type(1){
-                                p{
-                                    font-size: 0;
-                                    width: 60px; height: 60px;
-                                    border: 1px solid #4F4F4F;
-                                    margin-bottom: 10px;
-                                    border-radius: 50px;
-                                    background:url(../resource/icon/camping.png) no-repeat center;
-                                }
-                                p.active{
-                                    background:url(../resource/icon/camping-w.png) no-repeat center #0E141C;
-                                }
-                            }
-                            li:nth-of-type(2){
-                                p{
-                                    font-size: 0;
-                                    width: 60px; height: 60px;
-                                    border: 1px solid #4F4F4F;
-                                    margin-bottom: 10px;
-                                    border-radius: 50px;
-                                    background:url(../resource/icon/glamping.png) no-repeat center;
-                                }
-                                p.active{
-                                    background:url(../resource/icon/glamping-w.png) no-repeat center #0E141C;
-                                }
-                            }
-                            li:nth-of-type(3){
-                                p{
-                                    font-size: 0;
-                                    width: 60px; height: 60px;
-                                    border: 1px solid #4F4F4F;
-                                    margin-bottom: 10px;
-                                    border-radius: 50px;
-                                    background:url(../resource/icon/caravan.png) no-repeat center;
-                                }
-                                p.active{
-                                    background:url(../resource/icon/caravan-w.png) no-repeat center #0E141C;
-                                }
-                                
-                            }
-                            li:nth-of-type(4){
-                                p{
-                                    font-size: 0;
-                                    width: 60px; height: 60px;
-                                    border: 1px solid #4F4F4F;
-                                    margin-bottom: 10px;
-                                    border-radius: 50px;
-                                    background:url(../resource/icon/car.png) no-repeat center;
-                                }
-                                p.active{
-                                    background:url(../resource/icon/car-w.png) no-repeat center #0E141C;
-                                }
-                            }
-                        }
-                    }
-                    .subject{
-                        margin-bottom: 20%;
-                        .title{
-                            display: flex;
-                            justify-content: space-between;
-                            margin-bottom: 5%;
-                            padding-bottom: 5%;
-                            border-bottom: 1px solid #4F4F4F;
-                            .icon{
-                                display: flex;
-                                align-items: center;
-                                p{
-                                    font-size: 0%; width: 30px; height: 30px;
-                                    background: url(../resource/icon/subject.png) no-repeat center;
-                                    margin-right: 10px;
-                                }
-                                h3{}
-                            }
-                            span{
-                                font-size: 0%; width: 30px; height: 30px;
-                                transform: rotate(90deg);
-                                background: url(../resource/icon/arrow.png) no-repeat center;
-                                background-size: 50%;
-                            }
-                        }
-                        .text{
-                            &.active5{
-                                display: none;
-                            }
-                            .text1{
-                                display: flex;
-                                justify-content: center;
-                                p{
-                                    width: 80px; height: 30px;
-                                    border: 1px solid #4F4F4F;
-                                    border-radius: 5px;
-                                    font-size: 14px;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    margin:2%;
-                                }
-                                .active{
-                                    background-color: #0E141C;
-                                    color: #fff;
-                                }
-                            }
-                            .text2{
-                                display: flex;
-                                justify-content: center;
-                                p{
-                                    width: 60px; height: 30px;
-                                    border: 1px solid #4F4F4F;
-                                    border-radius: 5px;
-                                    font-size: 14px;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    margin:2%;
-                                }
-                                .active{
-                                    background-color: #0E141C;
-                                    color: #fff;
-                                }
-                            }
-                        }
-                    }
-                    .btn{
-                        display: flex;
-                        justify-content: center;
-                        a{
-                            font-size: 16px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            width: 100px; height: 40px;
-                            background-color: #0E141C;
-                            border-radius: 10px;
-                            color: #fff;
-                            margin: 0 2%;
-                        }
-                
-                    }
-                }
-            }
-            
-        }
-    }
-}
-
-
-/*main*/
-main{
-    width: 100%;
-    padding: 0% 5%;
-    h2{
-        font-size: 30px;
-        margin: 10% 0%;
-        p{
-            font-size: 30px;
-        }
-    }
-    .m-main{
-        margin-bottom: 10%;
-        .m-img{
-            width: 100%; height: 50vw;
-            overflow: hidden;
-            img{
-                width: 100%; height: 100%;
-            }
-        } 
-        .m-title{
-            margin: 3% 0;
-            h3{
-                font-weight: 400;
-                font-size: 14px;
-                margin-bottom: 1%;
-            }
-            .ad{
-                display: flex;
-                justify-content: space-between;
-                p:nth-of-type(1){
-                    color: #284257;
-                    font-size: 12px;
-                }
-                p:nth-of-type(2){
-                    display: block;
-                    font-size: 0%; width: 18px; height: 18px;
-                    background: url(../resource/icon/bi_heart-navy.png) no-repeat center;
-                    background-size: 100%;
-                }
-            }
-            .info{
-                position: relative;
-                p{
-                    font-size: 12px;
-                    color:#BDBDBD;
-                    margin-bottom: 2%;
-                    span{
-                        font-size: 12px;
-                        color: #0E141C;
-                    }
-                }
-                .arrow1{
-                    font-size: 0%; width: 20px; height: 20px;
-                    position: absolute; top:57.5%; left: 94.5%;
-                    transform: rotate(-90deg);
-                    background: url(../resource/icon/arrow.png) no-repeat center;
-                    background-size: 100%;
-                }
-            }
-            .info-on{
-                &.active1{
-                    display: block;
-                }
-                display: none;
-                p{
-                    font-size: 12px;
-                    color:#BDBDBD;
-                    margin-bottom: 2%;
-                    span{
-                        font-size: 12px;
-                        color: #0E141C;
-                    }
-                }
-                a {
-                    .btn{
-                        font-size: 14px;
-                        margin-top: 5%; padding: 2%;
-                        text-align: center;
-                        background-color: #0E141C;
-                        color: #fff;
-                        border-radius: 10px;
-                    }
-                }
-            }
-        }
-    }
-    .m-page{
-        display: flex;
-        justify-content: center;
-        padding: 5% 0 10% 0;
-        p{
-            font-size: 12px;
-            padding: 0 1%;
-        }
-    }
-}
-
-/*footer*/
-.f-mobile {
-    background-color: #0E141C;
-    color: #fff;
-    width: 100%;
-    padding: 3%;
-
-    display: flex;
-    flex-direction: column-reverse;
-    .info {
-        text-align: center;
-        ul{
+        /*header*/
+        .mobile{
             display: flex;
-            li{
-                margin-right: 8%;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%; height: 60px;
+            background-color:#0E141C;
+            padding: 2%;
+            a {
+                h2 {
+                    color: #fff;
+                    font-family: 'Poiret One', cursive;
+                    font-size: 20px; font-weight: 300;
+                }
+            }
+            .menu{
+                display: flex;
+                a{
+                    color: #fff;
+                    font-family: 'Poiret One', cursive;
+                    font-size: 12px;
+                    padding-right:10px;
+                }
+                a:nth-of-type(3){
+                    display: none;
+                }
+                a:nth-of-type(4){
+                    display: none;
+                }
+            }
+        }
+        .hide{
+            overflow: hidden;
+            position: absolute;
+            .m-icon{
+                &.active{
+                    right: 90%;
+                }
+                transition: .5s;
+                position: fixed; top: 11.5%; right: 0;
+                width: 40px; height: 40px;
+                background-color:#0E141C;
+                border-radius: 10px 0px 0px 10px;
+                .m-icon-img{
+                    font-size: 0; 
+                    width: 40px; height: 40px; 
+                    background:url(../resource/icon/filter.png) no-repeat center;
+                }
+            }
+            .m-filter{
+                &.active{
+                    transform: translateX(10%);
+                }
+                transform: translateX(100%);
+                position: fixed; top: 0; right: 0%;
+                width: 100%; height: 100%;
+                transition: 0.5s;
+                z-index: 999;
+                overflow: auto;
+                .m-content{
+                    padding-bottom: 5%;
+                    width: 90%;
+                    background-color: #fff;
+                    h2{
+                        padding: 10% 5%;
+                        font-weight: 400;
+                        font-size: 20px;
+                    }
+                    .filter{
+                        width: 100%; 
+                        padding: 5%;
+                        flex-shrink: 0;
+                        .area{
+                            margin-bottom: 10%;
+                            .title{
+                                display: flex;
+                                justify-content: space-between;
+                                margin-bottom: 5%;
+                                padding-bottom: 5%;
+                                border-bottom: 1px solid #4F4F4F;
+                                .icon{
+                                    display: flex;
+                                    align-items: center;
+                                    p{
+                                        font-size: 0%; width: 30px; height: 30px;
+                                        background: url(../resource/icon/ep_location.png) no-repeat center;
+                                        margin-right: 10px;
+                                    }
+                                    h3{}
+                                }
+                                span{
+                                    font-size: 0%; width: 30px; height: 30px;
+                                    transform: rotate(270deg);
+                                    background: url(../resource/icon/arrow.png) no-repeat center;
+                                    background-size: 50%;
+                                }
+                            }
+                            .ul{
+                                &.active3{
+                                display: flex;
+                                justify-content: space-around;
+                                }
+            
+                                display: none;
+                                justify-content: space-around;
+                                text-align: center;
+                                .main-title{
+                                    font-weight: 600;
+                                    border: none;
+                                    padding: 4px;
+                                }
+                                li{
+                                    padding: 7px;
+                                    font-size: 14px;
+                                    margin: 3% 0%;
+                                }
+                                .active{
+                                    background-color: #0E141C;
+                                    color: #fff;
+                                    border-radius: 10px;
+                                }
+                            }
+                        }
+                        .tema{
+                            margin-bottom: 7%;
+                            .title{
+                                display: flex;
+                                justify-content: space-between;
+                                margin-bottom: 5%;
+                                padding-bottom: 5%;
+                                border-bottom: 1px solid #4F4F4F;
+                                .icon{
+                                    display: flex;
+                                    align-items: center;
+                                    p{
+                                        font-size: 0%; width: 30px; height: 30px;
+                                        background: url(../resource/icon/Tema.png) no-repeat center;
+                                        margin-right: 10px;
+                                    }
+                                    h3{}
+                                }
+                                span{
+                                    font-size: 0%; width: 30px; height: 30px;
+                                    transform: rotate(90deg);
+                                    background: url(../resource/icon/arrow.png) no-repeat center;
+                                    background-size: 50%;
+                                }
+                            }
+                            ul{
+                                &.active4{
+                                    display: none;
+                                }
+                                padding-top: 7%;
+                                justify-content: space-evenly;
+                                display: flex;
+                                li{
+                                    &.active {
+                                        color: #0E141C;
+                                        font-weight: 400;
+                                    }
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    padding: 2%;
+                                    color: #4F4F4F;
+                                    font-size: 14px;
+                                }
+                                li:nth-of-type(1){
+                                    p{
+                                        font-size: 0;
+                                        width: 60px; height: 60px;
+                                        border: 1px solid #4F4F4F;
+                                        margin-bottom: 10px;
+                                        border-radius: 50px;
+                                        background:url(../resource/icon/camping.png) no-repeat center;
+                                    }
+                                    p.active{
+                                        background:url(../resource/icon/camping-w.png) no-repeat center #0E141C;
+                                    }
+                                }
+                                li:nth-of-type(2){
+                                    p{
+                                        font-size: 0;
+                                        width: 60px; height: 60px;
+                                        border: 1px solid #4F4F4F;
+                                        margin-bottom: 10px;
+                                        border-radius: 50px;
+                                        background:url(../resource/icon/glamping.png) no-repeat center;
+                                    }
+                                    p.active{
+                                        background:url(../resource/icon/glamping-w.png) no-repeat center #0E141C;
+                                    }
+                                }
+                                li:nth-of-type(3){
+                                    p{
+                                        font-size: 0;
+                                        width: 60px; height: 60px;
+                                        border: 1px solid #4F4F4F;
+                                        margin-bottom: 10px;
+                                        border-radius: 50px;
+                                        background:url(../resource/icon/caravan.png) no-repeat center;
+                                    }
+                                    p.active{
+                                        background:url(../resource/icon/caravan-w.png) no-repeat center #0E141C;
+                                    }
+                                    
+                                }
+                                li:nth-of-type(4){
+                                    p{
+                                        font-size: 0;
+                                        width: 60px; height: 60px;
+                                        border: 1px solid #4F4F4F;
+                                        margin-bottom: 10px;
+                                        border-radius: 50px;
+                                        background:url(../resource/icon/car.png) no-repeat center;
+                                    }
+                                    p.active{
+                                        background:url(../resource/icon/car-w.png) no-repeat center #0E141C;
+                                    }
+                                }
+                            }
+                        }
+                        .subject{
+                            margin-bottom: 20%;
+                            .title{
+                                display: flex;
+                                justify-content: space-between;
+                                margin-bottom: 5%;
+                                padding-bottom: 5%;
+                                border-bottom: 1px solid #4F4F4F;
+                                .icon{
+                                    display: flex;
+                                    align-items: center;
+                                    p{
+                                        font-size: 0%; width: 30px; height: 30px;
+                                        background: url(../resource/icon/subject.png) no-repeat center;
+                                        margin-right: 10px;
+                                    }
+                                    h3{}
+                                }
+                                span{
+                                    font-size: 0%; width: 30px; height: 30px;
+                                    transform: rotate(90deg);
+                                    background: url(../resource/icon/arrow.png) no-repeat center;
+                                    background-size: 50%;
+                                }
+                            }
+                            .text{
+                                &.active5{
+                                    display: none;
+                                }
+                                .text1{
+                                    display: flex;
+                                    justify-content: center;
+                                    p{
+                                        width: 80px; height: 30px;
+                                        border: 1px solid #4F4F4F;
+                                        border-radius: 5px;
+                                        font-size: 14px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        margin:2%;
+                                    }
+                                    .active{
+                                        background-color: #0E141C;
+                                        color: #fff;
+                                    }
+                                }
+                                .text2{
+                                    display: flex;
+                                    justify-content: center;
+                                    p{
+                                        width: 60px; height: 30px;
+                                        border: 1px solid #4F4F4F;
+                                        border-radius: 5px;
+                                        font-size: 14px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        margin:2%;
+                                    }
+                                    .active{
+                                        background-color: #0E141C;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                        .btn{
+                            display: flex;
+                            justify-content: center;
+                            a{
+                                font-size: 16px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 100px; height: 40px;
+                                background-color: #0E141C;
+                                border-radius: 10px;
+                                color: #fff;
+                                margin: 0 2%;
+                            }
+                    
+                        }
+                    }
+                }
+                
+            }
+        }
+    
+    
+    
+    /*main*/
+    main{
+        width: 100%;
+        padding: 0% 5%;
+        h2{
+            font-size: 30px;
+            margin: 10% 0%;
+            p{
+                font-size: 30px;
+            }
+        }
+        .m-main{
+            margin-bottom: 10%;
+            .m-img{
+                width: 100%; height: 50vw;
+                overflow: hidden;
+                img{
+                    width: 100%; height: 100%;
+                }
+            } 
+            .m-title{
+                margin: 3% 0;
+                h3{
+                    font-weight: 400;
+                    font-size: 14px;
+                    margin-bottom: 1%;
+                }
+                .ad{
+                    display: flex;
+                    justify-content: space-between;
+                    p:nth-of-type(1){
+                        color: #284257;
+                        font-size: 12px;
+                    }
+                    p:nth-of-type(2){
+                        display: block;
+                        font-size: 0%; width: 18px; height: 18px;
+                        background: url(../resource/icon/bi_heart-navy.png) no-repeat center;
+                        background-size: 100%;
+                    }
+                }
+                .info{
+                    position: relative;
+                    p{
+                        font-size: 12px;
+                        color:#BDBDBD;
+                        margin-bottom: 2%;
+                        span{
+                            font-size: 12px;
+                            color: #0E141C;
+                        }
+                    }
+                    .arrow1{
+                        font-size: 0%; width: 20px; height: 20px;
+                        position: absolute; top:57.5%; left: 94.5%;
+                        transform: rotate(-90deg);
+                        background: url(../resource/icon/arrow.png) no-repeat center;
+                        background-size: 100%;
+                    }
+                }
+                .info-on{
+                    &.active1{
+                        display: block;
+                    }
+                    display: none;
+                    p{
+                        font-size: 12px;
+                        color:#BDBDBD;
+                        margin-bottom: 2%;
+                        span{
+                            font-size: 12px;
+                            color: #0E141C;
+                        }
+                    }
+                    a {
+                        .btn{
+                            font-size: 14px;
+                            margin-top: 5%; padding: 2%;
+                            text-align: center;
+                            background-color: #0E141C;
+                            color: #fff;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .m-page{
+            display: flex;
+            justify-content: center;
+            padding: 5% 0 10% 0;
+            p{
+                font-size: 12px;
+                padding: 0 1%;
+            }
+        }
+    }
+    
+    /*footer*/
+    .f-mobile {
+        background-color: #0E141C;
+        color: #fff;
+        width: 100%;
+        padding: 3%;
+    
+        display: flex;
+        flex-direction: column-reverse;
+        .info {
+            text-align: center;
+            ul{
+                display: flex;
+                li{
+                    margin-right: 8%;
+                    font-size: 0.3vw;
+                }
+            }
+            p:nth-of-type(1){
+                margin: 3% 0;
+                font-size: 0.3vw;
+            }
+            p:nth-of-type(2){
                 font-size: 0.3vw;
             }
         }
-        p:nth-of-type(1){
-            margin: 3% 0;
-            font-size: 0.3vw;
+        h2 {
+            font-family: 'Poiret One', cursive;
+            font-size: 6vw; font-weight: 300;
+            padding: 3% 0% 5% 0%;
         }
-        p:nth-of-type(2){
-            font-size: 0.3vw;
-        }
-    }
-    h2 {
-        font-family: 'Poiret One', cursive;
-        font-size: 6vw; font-weight: 300;
-        padding: 3% 0% 5% 0%;
     }
 }
 
