@@ -1,0 +1,23 @@
+@import "_common";
+
+body{
+    header{color: #0E141C;
+        .right{
+            a:nth-of-type(1){
+                right: 15%;
+                display: none;
+            }
+            a:nth-of-type(3){
+                right: 8.5%;
+                display: none;
+            }
+            a:nth-of-type(4){
+                right: 2%;
+                display: none;
+            }
+        }
+    }
+    iframe{
+        margin: 3%;
+    }
+}

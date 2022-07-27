@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./scss/communuty.css">
+    <script defer src="./script/_common.js"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <title>community</title>
+</head>
+<body>
+
+<!--★추가★-->
+    <header>
+        <a href="./index.html"><h2>FOR#REST</h2></a>
+        <div>
+            <nav class="left">
+                <a onclick="goBack()">BACK</a>
+            </nav>
+            <nav class="right">
+                <a href="./commnunity.html">COMMUNITY</a>
+                <a href="javascript:loginWithKakao();" >LOGIN</a>
+                <a href="./my-page.html">MY PAGE</a>
+                <a href="javascript:kakaoLogout();" >LOGOUT</a>
+            </nav>
+        </div>
+    </header>
+
+<!--★변경★-->
+    <iframe 
+        width="94%" height="1080px"
+        src="http://itsjuheee.dothome.co.kr/g5/bbs/board.php?bo_table=free" 
+        frameborder="0" scrolling="no">
+    </iframe>
+
+    <footer>
+        <div class="info">
+            <ul>
+                <li>서비스이용약관</li>
+                <li>UGC이용약관</li>
+                <li>개인정보처리방침</li>
+                <li>사이트맵</li>
+            </ul>
+
+            <p>고객상담팀(수신자요금부담) 080-023-5454 (상담시간 월~금: AM 09:00~PM 06:00)</p>
+
+            <p>© FOR#REST CORPORATION. All rights reserved.</p>
+        </div>
+
+        <h2>FOR#REST</h2>
+    </footer>
+</body>
+</html>

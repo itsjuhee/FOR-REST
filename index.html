@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR#REST</title>
+
+<!--★추가★-->
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script> <!--SDK 포함하기-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer src="./script/_common.js"></script>
+    <script defer src="./script/index.js"></script>
+
+    <link href="./scss/index.css" rel="stylesheet">
+</head>
+<body>
+
+<!--★추가★-->
+<header>
+    <a href="./index.html"><h2>FOR#REST</h2></a>
+    <div>
+        <nav class="left">
+            <a onclick="goBack()">BACK</a>
+        </nav>
+        <nav class="right">
+            <a href="./commnunity.html">COMMUNITY</a>
+            <a href="javascript:loginWithKakao();" >LOGIN</a>
+            <a href="./my-page.html">MY PAGE</a>
+            <a href="javascript:kakaoLogout();" >LOGOUT</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="main-bg"><img src="./resource/img/main-bg.jpg" alt="main-bg"></div>
+    <div class="hot">
+
+        <div class="title">
+            <h3>HOT CAMPING</h3>
+            <p><span>FOR#REST</span>에서 <br> 인기있는 캠핑지는?</p>
+        </div>
+
+        <div class="slide">
+            <ul>
+                <li class="active">
+                    <p>01</p>
+                    <div>
+                        <p><span class="location">location</span>그린캠핑장</p>
+                        <img src="./resource/img/main-hot01.jpg" alt="/main-hot01">
+                    </div>
+                </li>
+                <li>
+                    <p>02</p>
+                    <div>
+                        <p><span class="location">location</span>그린캠핑장</p>
+                        <img src="./resource/img/main-hot02.jpg" alt="/main-hot02">
+                    </div>
+                </li>
+                <li>
+                    <p>03</p>
+                    <div>
+                        <p><span class="location">location</span>그린캠핑장</p>
+                        <img src="./resource/img/main-hot03.jpg" alt="/main-hot03">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-banner">
+        <div class="banner"><img src="./resource/img/banner.png" alt="banner"></div>
+        <div class="txt">
+            <p>나만의 취향저격 캠핑장 찾아보세요!</p>
+            <span>FOR#REST</span>
+            <a href="./search.html">캠핑장 찾아보기 ></a>
+        </div>
+    </div>
+
+    <div class="community">
+        <div class="title">
+            <h3>COMMUNITY</h3>
+            <p>궁금한거 있으면 <br> <span>FOR#REST</span>에 물어봐,</p>
+        </div>
+        <div class="slide">
+            <div class="phone">
+                <img src="./resource/img/phone.png" alt="phone">
+            </div>
+            <ul>
+                <li class="active">
+                    <div class="bg">
+                        <img src="./resource/img/main-com01.jpg" alt="main-com">
+                        <div class="txt active">
+                            <div class="txt-t">
+                                <div class="txt-t-t">
+                                    <div class="pro">
+                                        <img src="./resource/icon/id.png" alt="id">
+                                        <p>borabora</p>
+                                    </div>
+                                    <p>2022.07.14</p>
+                                </div>
+                                <p class="detail">
+                                    바다가 바로 앞에 있고 사이트에서 바로 볼 수 있어서 너무 좋은 뷰 ! 매점이나 화장실, 개수대도 깔끔해서 더욱 좋았습니다 :)
+                                </p>
+                                <span>#한적한바다 #별똥별</span>
+                            </div>
+                            <div class="txt-b">
+                                <ul>
+                                    <li>
+                                        <a class="heart">heart</a>
+                                        <span>3,609</span>
+                                    </li>
+                                    <li>
+                                        <a class="comment">comment</a>
+                                        <span>96</span>
+                                    </li>
+                                    <li>
+                                        <a class="location"></a>
+                                        <span>강릉 안목해변</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="bg">
+                        <img src="./resource/img/main-com02.jpg" alt="main-com">
+                        <div class="txt">
+                            <div class="txt-t">
+                                <div class="txt-t-t">
+                                    <div class="pro">
+                                        <img src="./resource/icon/id.png" alt="id">
+                                        <p>borabora</p>
+                                    </div>
+                                    <p>2022.07.14</p>
+                                </div>
+                                <p class="detail">
+                                    바다가 바로 앞에 있고 사이트에서 바로 볼 수 있어서 너무 좋은 뷰 ! 매점이나 화장실, 개수대도 깔끔해서 더욱 좋았습니다 :)
+                                </p>
+                                <span>#한적한바다 #별똥별</span>
+                            </div>
+                            <div class="txt-b">
+                                <ul>
+                                    <li>
+                                        <a class="heart">heart</a>
+                                        <span>3,609</span>
+                                    </li>
+                                    <li>
+                                        <a class="comment">comment</a>
+                                        <span>96</span>
+                                    </li>
+                                    <li>
+                                        <a class="location"></a>
+                                        <span>강릉 안목해변</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="bg">
+                        <img src="./resource/img/main-com03.jpg" alt="main-com">
+                        <div class="txt">
+                            <div class="txt-t">
+                                <div class="txt-t-t">
+                                    <div class="pro">
+                                        <img src="./resource/icon/id.png" alt="id">
+                                        <p>borabora</p>
+                                    </div>
+                                    <p>2022.07.14</p>
+                                </div>
+                                <p class="detail">
+                                    바다가 바로 앞에 있고 사이트에서 바로 볼 수 있어서 너무 좋은 뷰 ! 매점이나 화장실, 개수대도 깔끔해서 더욱 좋았습니다 :)
+                                </p>
+                                <span>#한적한바다 #별똥별</span>
+                            </div>
+                            <div class="txt-b">
+                                <ul>
+                                    <li>
+                                        <a class="heart">heart</a>
+                                        <span>3,609</span>
+                                    </li>
+                                    <li>
+                                        <a class="comment">comment</a>
+                                        <span>96</span>
+                                    </li>
+                                    <li>
+                                        <a class="location"></a>
+                                        <span>강릉 안목해변</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="bg">
+                        <img src="./resource/img/main-com04.jpg" alt="main-com">
+                        <div class="txt">
+                            <div class="txt-t">
+                                <div class="txt-t-t">
+                                    <div class="pro">
+                                        <img src="./resource/icon/id.png" alt="id">
+                                        <p>borabora</p>
+                                    </div>
+                                    <p>2022.07.14</p>
+                                </div>
+                                <p class="detail">
+                                    바다가 바로 앞에 있고 사이트에서 바로 볼 수 있어서 너무 좋은 뷰 ! 매점이나 화장실, 개수대도 깔끔해서 더욱 좋았습니다 :)
+                                </p>
+                                <span>#한적한바다 #별똥별</span>
+                            </div>
+                            <div class="txt-b">
+                                <ul>
+                                    <li>
+                                        <a class="heart">heart</a>
+                                        <span>3,609</span>
+                                    </li>
+                                    <li>
+                                        <a class="comment">comment</a>
+                                        <span>96</span>
+                                    </li>
+                                    <li>
+                                        <a class="location"></a>
+                                        <span>강릉 안목해변</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="bg">
+                        <img src="./resource/img/main-com05.jpg" alt="main-com">
+                        <div class="txt">
+                            <div class="txt-t">
+                                <div class="txt-t-t">
+                                    <div class="pro">
+                                        <img src="./resource/icon/id.png" alt="id">
+                                        <p>borabora</p>
+                                    </div>
+                                    <p>2022.07.14</p>
+                                </div>
+                                <p class="detail">
+                                    바다가 바로 앞에 있고 사이트에서 바로 볼 수 있어서 너무 좋은 뷰 ! 매점이나 화장실, 개수대도 깔끔해서 더욱 좋았습니다 :)
+                                </p>
+                                <span>#한적한바다 #별똥별</span>
+                            </div>
+                            <div class="txt-b">
+                                <ul>
+                                    <li>
+                                        <a class="heart">heart</a>
+                                        <span>3,609</span>
+                                    </li>
+                                    <li>
+                                        <a class="comment">comment</a>
+                                        <span>96</span>
+                                    </li>
+                                    <li>
+                                        <a class="location"></a>
+                                        <span>강릉 안목해변</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="today">
+        <div class="title">
+            <h3>TODAY CAMPING</h3>
+            <p><span>FOR#REST</span>에서만 특별한 <br> #테마와 함께</p>
+        </div>
+        <ul>
+            <li>
+                <div class="txt">
+                    <span>애견동반이 가능한 캠핑장</span>
+                    <p>댕댕이와 함께 갈 수 있다면</p>
+                </div>
+                <div class="shadow">
+                    <a href="./web-sub-todaycamping.html">
+                        <img src="./resource/img/main-today01.jpg" alt="main-today01.jpg">
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="txt">
+                    <span>캠핑 잘 몰라요...</span>
+                    <p>몸만 가면되는 수도권 글램핑</p>
+                </div>
+                <div class="shadow">
+                    <img src="./resource/img/main-today02.jpg" alt="main-today02.jpg">
+                </div>
+            </li>
+            <li>
+                <div class="txt">
+                    <span>자고 오는건 많이 힘드시죠?</span>
+                    <p>오늘갔다 오늘옵시다</p>
+                </div>
+                <div class="shadow">
+                    <img src="./resource/img/main-today03.jpg" alt="main-today03.jpg">
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <!--★추가★-->
+    <div class="top">
+        <a>#</a>
+    </div>
+</main>
+
+<footer>
+    <div class="info">
+        <ul>
+            <li>서비스이용약관</li>
+            <li>UGC이용약관</li>
+            <li>개인정보처리방침</li>
+            <li>사이트맵</li>
+        </ul>
+
+        <p>고객상담팀(수신자요금부담) 080-023-5454 (상담시간 월~금: AM 09:00~PM 06:00)</p>
+
+        <p>© FOR#REST CORPORATION. All rights reserved.</p>
+    </div>
+
+    <h2>FOR#REST</h2>
+</footer>
+
+</body>
+</html>
