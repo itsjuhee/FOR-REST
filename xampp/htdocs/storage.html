@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="popup">
+    <img src="img/module_table_top.png">
+    <input type="checkbox" name="day">
+    <button>닫기</button>
+</div>
+  
+<script>
+    
+//localStorage(5Mb)
+    //set
+    localStorage.oneday = 'popup1';
+    localStorage.twoday = 'popup2';
+    localStorage.setItem('thrday','popup3');
+    
+    //get
+    alert( localStorage.twoday );
+    alert(  localStorage.getItem('oneday')  );
+    
+    //remove
+    localStorage.removeItem('thrday');
+    localStorage.clear();
+    
+    
+    
+//cookie(4Kb)    
+var popup = document.querySelector('.popup');
+var input = document.querySelector('.popup input');
+var button = document.querySelector('.popup button');
+    
+    setCookie('twoday','event',20000);
+    
+    button.addEventListener('click',function(){
+        if(input.checked){
+           setCookie('onday','popup',10000);
+        }
+        popup.style.display = 'none';
+        //console.log(input.checked);        
+    });
+    
+function setCookie(name,value,time){
+    var today = new Date();
+    today.setTime(today.getTime() + time);
+    
+    //alert(today.toUTCString());    
+    document.cookie = name+"="+value+";expires="+today.toUTCString(); //onday=popup
+}
+function getCookie(){
+    if(document.cookie.match('popup') != null){
+        popup.style.display = 'none';
+    }else{
+        popup.style.display = 'block';
+    }
+    // name=popup
+}
+getCookie();
+    
+</script>
+  
+  
+  
+  
+  
+  
+  
+   
+   
+</body>
+</html>

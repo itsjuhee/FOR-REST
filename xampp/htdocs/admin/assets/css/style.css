@@ -1,0 +1,91 @@
+/*** 기본 태그 스타일 ***/
+body,table,input,textarea,select,td {
+	font:9pt tahoma;
+	color:#000000;
+}
+img		{border:0;}
+form	{display:inline;}
+
+/*** 방향 설정 ***/
+.left	{text-align:left;}
+.right	{text-align:right;}
+.center	{text-align:center;}
+
+/*** 리스트형 테이블 레이아웃 ***/
+.rnd {
+	border-left:2px solid #ffffff;
+	border-right:2px solid #ffffff;
+	background-color:#4A3F38;
+	height:1px;
+}
+.rndbg {
+	background-color:#4A3F38;
+	height:25px;
+	color:#ffffff;
+}
+.rndline {
+	height:1px;
+	background-color:#DCD8D6;
+}
+
+/*** 한글폰트 ***/
+.small {
+	font:8pt Dotum;
+	letter-spacing:0px;
+	padding-top:3px;
+}
+
+/*** 영문폰트 ***/
+.eng	{font:8pt 굴림;}
+.engb	{font:bold 8pt 굴림;}
+.ver9	{font:9pt verdana;}
+.ver92	{font:9pt verdana;letter-spacing:-1.2px;}
+.ver90	{font:9pt verdana;letter-spacing:-1.0px;}
+.ver8	{font:8pt verdana;}
+.ver81	{font:8pt verdana;letter-spacing:-1.8px;}
+
+/*** 폼박스 셀 ***/
+.cellC {
+	width:120px;
+	background-color:#F6F6F6;
+	text-align:center;
+	padding:4px 0;
+	color:#000000;
+}
+
+.cellL {
+	padding:0 5px;
+	background-color:#FFFFFF;
+}
+
+/*** 폼박스 기본 설정 ***/
+form input,textarea {border:1px solid #cccccc;}
+form .noline input {border:0;}
+
+/*** 서브 메뉴 타이틀 ***/
+.title {
+	margin:20px 0 8px 0;
+	padding:2px 0 0 10px;
+	font-weight:bold;
+	height:26px;
+	letter-spacing:-1px;
+	border-bottom:3px solid #cccccc;
+}
+
+/*** 서브 메뉴 타이틀 부가 설명글 ***/
+.title span {
+	font:8pt dotum;
+	padding-left:10px;
+	color:#6D6D6D
+}
+
+/*** 페이지 영역 스타일 ***/
+.pageInfo {
+	padding:5px 0 5px 12px;
+	letter-spacing:-1px;
+	color:#585858;
+	background:url(../../img/item/ico_bullet.gif) no-repeat 0 5px;
+}
+.pageNavi {
+	padding:10px;
+}

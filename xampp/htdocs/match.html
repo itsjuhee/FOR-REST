@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="match">  </div>
+  
+<script>
+    var str0 = 'popup';
+    var reg = str0.match('aa'); 
+    
+    
+    
+var str1 = "javascript자바스크 java +0*/_ HTML5";
+//var regExp1 = new RegExp(ab+b);
+    
+//전체 문자열에서 java문자를 검색
+var regExp1 = str1.match(/java/ig);
+//[]안에 문자를 검색
+var regExp2 = str1.match(/[scripthtml]/ig);
+//[javascript]문자를 제외한 나머지 검색
+var regExp3 = str1.match(/[^javascript]/ig);
+//문자열 대문자만 검색    
+var regExp4 = str1.match(/[A-Z]/g);
+//문자열 소문자만 검색
+var regExp5 = str1.match(/[a-z]/g);
+//0~9까지의 숫자 검색    
+var regExp6 = str1.match(/[0-9]/ig);
+//전체 문자열에서 script 또는 html 검색
+var regExp7 = str1.match(/script|html/ig);
+//j로 시작하는 문자열 검색    
+var regExp8 = str1.match(/^j/ig);
+//5끝나는 문자열
+var regExp9 = str1.match(/5$/g);
+//대소문자, 숫자, _ 검색
+var regExp10 = str1.match(/\w/g);
+//(대소문자, 숫자, _) 제외한 문자열 검색
+var regExp11 = str1.match(/\W/g);
+    
+var str2 = "a bc";
+var str3 = "ab";
+var str4 = "abdcvxcv";
+//앞 문자열이 반드시 2개 이상 포함되어 있고, 반복 허용
+var regExp12 = str2.match(/abc*/ig);
+var regExp13 = str3.match(/abc*/ig);
+var regExp14 = str4.match(/abc*/ig);
+//앞 문자열이 없어도 되고, 반복 포함하지 않음
+var regExp15 = str3.match(/abc?/ig);
+var regExp16 = str4.match(/abc?/ig);
+    
+var str5 = "123 123456 12897689";
+var regExp17 = str5.match(/\d{5}/ig);
+var regExp18 = str5.match(/\d{3,6}/ig);
+var regExp19 = str5.match(/\d{3,}/ig);
+var regExp20 = str1.match(/[ㄱ-힣]/ig);
+
+
+    with(document.querySelector('.match')){
+        innerHTML = "<br>"+regExp20; 
+        innerHTML += "<br>"+regExp19; 
+        innerHTML += "<br>"+regExp18; 
+        innerHTML += "<br>"+regExp17; 
+        
+        innerHTML += "<br>"+regExp16; 
+        innerHTML += "<br>"+regExp15; 
+        
+        innerHTML += "<br>"+regExp14; 
+        innerHTML += "<br>"+regExp13; 
+        innerHTML += "<br>"+regExp12; 
+        
+        innerHTML += "<br>"+regExp11; 
+        innerHTML += "<br>"+regExp1; 
+        innerHTML += "<br>"+regExp2;
+        innerHTML += "<br>"+regExp3;
+        innerHTML += "<br>"+regExp4;
+        innerHTML += "<br>"+regExp5;
+        innerHTML += "<br>"+regExp6;
+        innerHTML += "<br>"+regExp7;
+        innerHTML += "<br>"+regExp8;
+        innerHTML += "<br>"+regExp9;
+        innerHTML += "<br>"+regExp10;
+    }
+
+    
+    /*
+    var obj = {
+        b:{
+            c:10,
+            d:20,
+            f:30
+        }
+    }
+    with(obj.b){
+        console.log(c);
+        console.log(d);
+        console.log(f);
+    }*/
+    /*
+    obj.b.c
+    obj.b.d
+    obj.b.f
+    */
+    
+    
+//  /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+
+//  /^[A-Za-z0-9]{6,12}$/;
+    
+</script>
+  
+  
+  
+  
+  
+  
+  
+   
+   
+</body>
+</html>
