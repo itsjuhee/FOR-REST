@@ -5,7 +5,15 @@ function login(){
         $('.right a').eq(1).css('display','none'); //LOGIN
         $('.right a').eq(2).show(); //MY PAGE
         $('.right a').eq(3).show();//LOGOUT
+<<<<<<< HEAD
         
+=======
+
+        $('.menu a').eq(1).css('display','none'); //LOGIN
+        $('.menu a').eq(2).show(); //MY PAGE
+        $('.menu a').eq(3).show(); //LOGOUT
+
+>>>>>>> bora
         let bora = sessionStorage.thumbnail;
 
         $('.id').text(`${sessionStorage.name}`);
