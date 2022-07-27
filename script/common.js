@@ -5,11 +5,17 @@ function login(){
         $('.right a').eq(1).css('display','none'); //LOGIN
         $('.right a').eq(2).show(); //MY PAGE
         $('.right a').eq(3).show();//LOGOUT
-        
+
+        $('.menu a').eq(1).css('display','none'); //LOGIN
+        $('.menu a').eq(2).show(); //MY PAGE
+        // $('.menu a').eq(3).show(); //LOGOUT
+
         let bora = sessionStorage.thumbnail;
 
         $('.id').text(`${sessionStorage.name}`);
         $('.thumbnail-img').css('background-image', `url( ${bora} )`);
+
+        $('.main-name').text(`${sessionStorage.name}`+`님,`); //모바일 메인
     }else{//로그인 안했을때 
         $('.right a').eq(1).show(); //LOGIN
         $('.right a').eq(2).css('display','none'); //MA PAGE
@@ -19,7 +25,7 @@ function login(){
 
 login();               
 
-window.Kakao.init('e045c21d5d6b2334aa1d0a98ea6febe4');
+window.Kakao.init('e7d9d90ebcf1a4d40b424301d24b5c77');
 
 //로그인
 function loginWithKakao() {
