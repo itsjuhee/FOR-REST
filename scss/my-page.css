@@ -58,6 +58,10 @@ header div .right a:nth-of-type(1) {
 header div .right a:nth-of-type(2) {
   right: 2%;
 }
+header div .right a:nth-of-type(3) {
+  display: none;
+  right: 2%;
+}
 
 footer {
   background-color: #0E141C;
@@ -67,7 +71,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.6vw;
+  font-size: 0.5vw;
 }
 footer .info ul {
   display: flex;
@@ -431,6 +435,17 @@ img {
 body header {
   color: #0E141C;
 }
+body header .right a:nth-of-type(1) {
+  right: 15%;
+}
+body header .right a:nth-of-type(3) {
+  right: 8.5%;
+  display: none;
+}
+body header .right a:nth-of-type(4) {
+  right: 2%;
+  display: none;
+}
 body main .my-page {
   width: 70%;
   margin: 0 auto;
@@ -443,11 +458,11 @@ body main .my-page .profile {
   width: 10%;
   margin: 2vw auto;
 }
-body main .my-page .profile span::after {
-  content: "";
+body main .my-page .profile .thumbnail-img {
   display: block;
   margin: 0 auto;
   background-color: #132839;
+  background-size: 100%;
   font-size: 0%;
   width: 5vw;
   height: 5vw;

@@ -58,6 +58,10 @@ header div .right a:nth-of-type(1) {
 header div .right a:nth-of-type(2) {
   right: 2%;
 }
+header div .right a:nth-of-type(3) {
+  display: none;
+  right: 2%;
+}
 
 footer {
   background-color: #0E141C;
@@ -67,7 +71,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.6vw;
+  font-size: 0.5vw;
 }
 footer .info ul {
   display: flex;
