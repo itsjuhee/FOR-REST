@@ -1,5 +1,3 @@
-function init(){
-    
 /*필터 토글*/
 $('.area-arrow').click(function(){
 
@@ -33,8 +31,10 @@ $('.ul div:nth-of-type(1) li').on('click', function(){
     $('li').removeClass('active');
     $(this).addClass('active'); 
 })
+// function init(){
+    
 
 
-}
+// }
 
-$(window).on('load',init);
+// $(window).on('load',init);
