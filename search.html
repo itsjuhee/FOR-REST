@@ -9,6 +9,7 @@
     <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=e7d9d90ebcf1a4d40b424301d24b5c77&libraries=services"></script>
     <script defer src="./script/search.js"></script>
     <script defer src="./script/search-api.js"></script>
+    <script defer src="./script/common.js"></script>
     <title>FOR#REST</title>
 </head>
 <body>
@@ -16,11 +17,13 @@
         <a href="./index.html"><h2>FOR#REST</h2></a>
         <div>
             <nav class="left">
-                <a href="./index.html">BACK</a>
+                <a onclick="goBack()">BACK</a>
             </nav>
             <nav class="right">
-                <a>COMMUNITY</a>
+                <a href="./commnunity.html">COMMUNITY</a>
+                <a href="javascript:loginWithKakao();" >LOGIN</a>
                 <a href="./my-page.html">MY PAGE</a>
+                <a href="javascript:kakaoLogout();" >LOGOUT</a>
             </nav>
         </div>
     </header>
