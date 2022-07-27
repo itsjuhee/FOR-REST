@@ -19,7 +19,7 @@ function login(){
 
 login();               
 
-window.Kakao.init('e045c21d5d6b2334aa1d0a98ea6febe4');
+window.Kakao.init('e7d9d90ebcf1a4d40b424301d24b5c77');
 
 //로그인
 function loginWithKakao() {
