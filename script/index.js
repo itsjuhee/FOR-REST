@@ -75,5 +75,8 @@ function pcInit(){
     mql.addListener(function(e){
         console.log(e.matches)
     })
+
+
+
 }
 window.addEventListener('load',pcInit)

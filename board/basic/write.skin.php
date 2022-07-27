@@ -166,7 +166,9 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 
     <?php if ($is_use_captcha) { //자동등록방지  ?>
     <div class="write_div">
-        <?php echo $captcha_html ?>
+        <?php 
+            // echo $captcha_html 
+        ?>
     </div>
     <?php } ?>
 

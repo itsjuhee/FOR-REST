@@ -1,0 +1,279 @@
+@import "_common";
+
+main{
+    .main-wrap{
+        .title{
+            text-align: center;
+            padding:5% 0;
+            font-family: 'Roboto';
+            font-weight: 600;
+            h2{
+                color: #284257;
+                font-size: 24px;
+            }
+            p{
+                &.active {
+                    display: block;
+                }
+                color:#536879;
+                font-size: 16px;
+                display: none;
+            }
+        }
+        .main-wrap2{
+            display: flex;
+            justify-content: space-evenly;
+            .filter{
+                position: sticky; top: 0;
+                width: 17%; height: 40%;
+                padding: 1%;
+                flex-shrink: 0;
+                .area{
+                    margin-bottom: 10%;
+                    .title{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 5%;
+                        padding-bottom: 5%;
+                        border-bottom: 1px solid #4F4F4F;
+                        .icon{
+                            display: flex;
+                            align-items: center;
+                            p{
+                                font-size: 0%; width: 30px; height: 30px;
+                                background: url(../resource/icon/ep_location.png) no-repeat center;
+                                margin-right: 10px;
+                            }
+                            h3{}
+                        }
+                        span{
+                            font-size: 0%; width: 30px; height: 30px;
+                            transform: rotate(90deg);
+                            background: url(../resource/icon/arrow.png) no-repeat center;
+                            background-size: 50%;
+                        }
+                    }
+                    .ul{
+                        display: flex;
+                        justify-content: space-around;
+                        text-align: center;
+                        .main-title{
+                            font-weight: 600;
+                            border: none;
+                            padding: 4px;
+                        }
+                        li{
+                            padding: 10px;
+                            font-size: 14px;
+                            margin-bottom: 2%;
+                        }
+                        .active{
+                            background-color: #0E141C;
+                            color: #fff;
+                            border-radius: 15px;
+                        }
+                    }
+                }
+                .tema{
+                    margin-bottom: 7%;
+                    .title{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 5%;
+                        padding-bottom: 5%;
+                        border-bottom: 1px solid #4F4F4F;
+                        .icon{
+                            display: flex;
+                            align-items: center;
+                            p{
+                                font-size: 0%; width: 30px; height: 30px;
+                                background: url(../resource/icon/Tema.png) no-repeat center;
+                                margin-right: 10px;
+                            }
+                            h3{}
+                        }
+                        span{
+                            font-size: 0%; width: 30px; height: 30px;
+                            transform: rotate(90deg);
+                            background: url(../resource/icon/arrow.png) no-repeat center;
+                            background-size: 50%;
+                        }
+                    }
+                    ul{
+                        padding-top: 7%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        li{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            margin-right: 3%;
+                            color: #4F4F4F;
+                            font-size: 0.6vw;
+                        }
+                        li:nth-of-type(1){
+                            p{
+                                font-size: 0;
+                                width: 60px; height: 60px;
+                                border: 1px solid #4F4F4F;
+                                margin-bottom: 10px;
+                                border-radius: 50px;
+                                background:url(../resource/icon/camping.png) no-repeat center;
+                            }
+                            p.active{
+                                background:url(../resource/icon/camping-w.png) no-repeat center #0E141C;
+                            }
+                        }
+                        li:nth-of-type(2){
+                            p{
+                                font-size: 0;
+                                width: 60px; height: 60px;
+                                border: 1px solid #4F4F4F;
+                                margin-bottom: 10px;
+                                border-radius: 50px;
+                                background:url(../resource/icon/glamping.png) no-repeat center;
+                            }
+                            p.active{
+                                background:url(../resource/icon/glamping-w.png) no-repeat center #0E141C;
+                            }
+                        }
+                        li:nth-of-type(3){
+                            p{
+                                font-size: 0;
+                                width: 60px; height: 60px;
+                                border: 1px solid #4F4F4F;
+                                margin-bottom: 10px;
+                                border-radius: 50px;
+                                background:url(../resource/icon/caravan.png) no-repeat center;
+                            }
+                            p.active{
+                                background:url(../resource/icon/caravan-w.png) no-repeat center #0E141C;
+                            }
+                            
+                        }
+                        li:nth-of-type(4){
+                            p{
+                                font-size: 0;
+                                width: 60px; height: 60px;
+                                border: 1px solid #4F4F4F;
+                                margin-bottom: 10px;
+                                border-radius: 50px;
+                                background:url(../resource/icon/car.png) no-repeat center;
+                            }
+                            p.active{
+                                background:url(../resource/icon/car-w.png) no-repeat center #0E141C;
+                            }
+                        }
+                    }
+                }
+                .subject{
+                    margin-bottom: 20%;
+                    .title{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 5%;
+                        padding-bottom: 5%;
+                        border-bottom: 1px solid #4F4F4F;
+                        .icon{
+                            display: flex;
+                            align-items: center;
+                            p{
+                                font-size: 0%; width: 30px; height: 30px;
+                                background: url(../resource/icon/subject.png) no-repeat center;
+                                margin-right: 10px;
+                            }
+                        }
+                        span{
+                            font-size: 0%; width: 30px; height: 30px;
+                            transform: rotate(90deg);
+                            background: url(../resource/icon/arrow.png) no-repeat center;
+                            background-size: 50%;
+                        }
+                    }
+                    .text{
+                        // display: none;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        p{
+                            padding: 2% 5%;
+                            margin:2%;
+                            border: 1px solid #4F4F4F;
+                            border-radius: 5px;
+                            font-size: 14px;
+                        }
+                        .active{
+                            background-color: #0E141C;
+                            color: #fff;
+                        }
+                    }
+                }
+                .btn{
+                    display: flex;
+                    justify-content: center;
+                    a{
+                        font-size: 16px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100px; height: 40px;
+                        background-color: #0E141C;
+                        border-radius: 10px;
+                        color: #fff;
+                        margin: 0 2%;
+                    }
+        
+                }
+            }
+            .main{
+                width: 70%;
+                margin:0;
+                flex-shrink: 0;
+                padding-top: 4%;
+                .thumnail{
+                    padding-bottom: 0%;
+                }
+                .main-btn{
+                    display: flex;
+                    justify-content: center;
+                    p{
+                        padding: 50px 10px 100px 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1060px) {
+    main {
+        .main-wrap {
+            .main-wrap2{
+                .filter {
+                    .area {
+                        width: 100%;
+                        .title {
+                            .icon {
+                                h3 {font-size: 1.8vw;}
+                                p {margin: 0;}
+                            }
+                        }
+                        .ul { 
+                            .main-title{
+                                font-weight: 500;
+                                font-size: 1.6vw;
+                                width: 50%;
+                            }
+                            li{
+                                padding: 10% 5%;
+                                font-size: 1.3vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

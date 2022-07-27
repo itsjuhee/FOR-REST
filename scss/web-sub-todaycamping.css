@@ -71,7 +71,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.5vw;
+  font-size: 0.6vw;
 }
 footer .info ul {
   display: flex;
@@ -131,13 +131,13 @@ footer h2 {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .thumnail li {
   position: relative;
   width: 22%;
   padding-top: 22%;
-  margin-bottom: 4%;
+  margin: 0 2% 4% 0;
 }
 .thumnail li .thum {
   width: 100%;
@@ -287,15 +287,26 @@ footer h2 {
 .popup-shadow .popup-all .popup .p-main .popup-txt .popup-main .popup-left .left-txt p {
   line-height: 30px;
 }
+.popup-shadow .popup-all .popup .p-main .popup-txt .popup-main .popup-right {
+  width: 50%;
+}
 .popup-shadow .popup-all .popup .p-main .popup-txt .popup-main .popup-right .right-txt h4 {
   font-weight: 500;
   margin-bottom: 2%;
+}
+.popup-shadow .popup-all .popup .p-main .popup-txt .popup-main .popup-right .right-txt:nth-of-type(2) h4 {
+  margin: 2% 0;
 }
 .popup-shadow .popup-all .popup .p-main .popup-txt .popup-main .popup-right .right-txt div {
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
+}
+.popup-shadow .popup-all .popup .p-main .popup-txt .popup-main .popup-right .right-txt div:nth-of-type(6) div {
+  justify-self: center;
+  width: 15vw;
+  text-align: center;
 }
 .popup-shadow .popup-all .popup .p-main .popup-txt .popup-main .popup-right .right-txt div .p {
   width: 20%;
@@ -312,11 +323,28 @@ footer h2 {
 .popup-shadow .popup-all .popup .p-main .popup-txt .popup-main .popup-right .right-txt .inst-wrap:last-of-type:after {
   content: "";
 }
-.popup-shadow .popup-all .popup .p-main .popup-txt .popup-main .popup-right .right-txt iframe {
-  overflow: hidden;
-  margin: 2% 0;
-}
 
+@media (min-width: 1190px) and (max-width: 1619px) {
+  .thumnail li {
+    width: 30%;
+    height: 21vw;
+  }
+}
+@media (max-width: 1189px) {
+  .thumnail li {
+    width: 30%;
+    height: 21vw;
+  }
+  .thumnail li .text h3 {
+    font-size: 1.8vw;
+  }
+  .thumnail li .text p {
+    font-size: 1.3vw;
+  }
+  .thumnail li .text p span {
+    font-size: 1.3vw;
+  }
+}
 @media (max-width: 767px) {
   .popup-shadow {
     width: 100%;
@@ -384,6 +412,7 @@ footer h2 {
     font-size: 4vw;
   }
   .popup-shadow .popup-all .popup .p-main .popup-txt .popup-main .popup-right {
+    width: 100%;
     order: 1;
   }
   .popup-shadow .popup-all .popup .p-main .popup-txt .popup-main .popup-right .right-txt h4 {
