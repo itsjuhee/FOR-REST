@@ -567,16 +567,8 @@ img {
   font-weight: 300;
 }
 
-/*filter*/
-.mobile-main {
-  width: 100%;
-  position: relative;
-  /*header*/
-  /*main*/
-  /*footer*/
-}
-
-.mobile-main .mobile {
+/*header*/
+.mobile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -592,27 +584,26 @@ img {
   padding: 2%;
 }
 
-.mobile-main .mobile a h2 {
+.mobile a h2 {
   color: #fff;
   font-family: 'Poiret One', cursive;
   font-size: 20px;
   font-weight: 300;
 }
 
-.mobile-main .mobile .menu {
+.mobile .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.mobile-main .mobile .menu a {
+.mobile .menu a {
   color: #fff;
   font-family: 'Poiret One', cursive;
   font-size: 12px;
   padding-right: 10px;
 }
 
-<<<<<<< HEAD
 /*filter*/
 body {
   width: 100%;
@@ -620,22 +611,11 @@ body {
 }
 
 body .hide {
-=======
-.mobile-main .mobile .menu a:nth-of-type(3) {
-  display: none;
-}
-
-.mobile-main .mobile .menu a:nth-of-type(4) {
-  display: none;
-}
-
-.mobile-main .hide {
->>>>>>> bora
   overflow: hidden;
   position: absolute;
 }
 
-.mobile-main .hide .m-icon {
+body .hide .m-icon {
   -webkit-transition: .5s;
   transition: .5s;
   position: fixed;
@@ -647,18 +627,18 @@ body .hide {
   border-radius: 10px 0px 0px 10px;
 }
 
-.mobile-main .hide .m-icon.active {
+body .hide .m-icon.active {
   right: 90%;
 }
 
-.mobile-main .hide .m-icon .m-icon-img {
+body .hide .m-icon .m-icon-img {
   font-size: 0;
   width: 40px;
   height: 40px;
   background: url(../resource/icon/filter.png) no-repeat center;
 }
 
-.mobile-main .hide .m-filter {
+body .hide .m-filter {
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   position: fixed;
@@ -672,35 +652,35 @@ body .hide {
   overflow: auto;
 }
 
-.mobile-main .hide .m-filter.active {
+body .hide .m-filter.active {
   -webkit-transform: translateX(10%);
           transform: translateX(10%);
 }
 
-.mobile-main .hide .m-filter .m-content {
+body .hide .m-filter .m-content {
   padding-bottom: 5%;
   width: 90%;
   background-color: #fff;
 }
 
-.mobile-main .hide .m-filter .m-content h2 {
+body .hide .m-filter .m-content h2 {
   padding: 10% 5%;
   font-weight: 400;
   font-size: 20px;
 }
 
-.mobile-main .hide .m-filter .m-content .filter {
+body .hide .m-filter .m-content .filter {
   width: 100%;
   padding: 5%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .area {
+body .hide .m-filter .m-content .filter .area {
   margin-bottom: 10%;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .area .title {
+body .hide .m-filter .m-content .filter .area .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -712,7 +692,7 @@ body .hide {
   border-bottom: 1px solid #4F4F4F;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .area .title .icon {
+body .hide .m-filter .m-content .filter .area .title .icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -721,7 +701,7 @@ body .hide {
           align-items: center;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .area .title .icon p {
+body .hide .m-filter .m-content .filter .area .title .icon p {
   font-size: 0%;
   width: 30px;
   height: 30px;
@@ -729,7 +709,7 @@ body .hide {
   margin-right: 10px;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .area .title span {
+body .hide .m-filter .m-content .filter .area .title span {
   font-size: 0%;
   width: 30px;
   height: 30px;
@@ -739,14 +719,14 @@ body .hide {
   background-size: 50%;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .area .ul {
+body .hide .m-filter .m-content .filter .area .ul {
   display: none;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   text-align: center;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .area .ul.active3 {
+body .hide .m-filter .m-content .filter .area .ul.active3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -754,29 +734,29 @@ body .hide {
       justify-content: space-around;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .area .ul .main-title {
+body .hide .m-filter .m-content .filter .area .ul .main-title {
   font-weight: 600;
   border: none;
   padding: 4px;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .area .ul li {
+body .hide .m-filter .m-content .filter .area .ul li {
   padding: 7px;
   font-size: 14px;
   margin: 3% 0%;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .area .ul .active {
+body .hide .m-filter .m-content .filter .area .ul .active {
   background-color: #0E141C;
   color: #fff;
   border-radius: 10px;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .tema {
+body .hide .m-filter .m-content .filter .tema {
   margin-bottom: 7%;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .tema .title {
+body .hide .m-filter .m-content .filter .tema .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -788,7 +768,7 @@ body .hide {
   border-bottom: 1px solid #4F4F4F;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .tema .title .icon {
+body .hide .m-filter .m-content .filter .tema .title .icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -797,7 +777,7 @@ body .hide {
           align-items: center;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .tema .title .icon p {
+body .hide .m-filter .m-content .filter .tema .title .icon p {
   font-size: 0%;
   width: 30px;
   height: 30px;
@@ -805,7 +785,7 @@ body .hide {
   margin-right: 10px;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .tema .title span {
+body .hide .m-filter .m-content .filter .tema .title span {
   font-size: 0%;
   width: 30px;
   height: 30px;
@@ -815,7 +795,7 @@ body .hide {
   background-size: 50%;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .tema ul {
+body .hide .m-filter .m-content .filter .tema ul {
   padding-top: 7%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
@@ -825,11 +805,11 @@ body .hide {
   display: flex;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .tema ul.active4 {
+body .hide .m-filter .m-content .filter .tema ul.active4 {
   display: none;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .tema ul li {
+body .hide .m-filter .m-content .filter .tema ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -845,12 +825,12 @@ body .hide {
   font-size: 14px;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .tema ul li.active {
+body .hide .m-filter .m-content .filter .tema ul li.active {
   color: #0E141C;
   font-weight: 400;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .tema ul li:nth-of-type(1) p {
+body .hide .m-filter .m-content .filter .tema ul li:nth-of-type(1) p {
   font-size: 0;
   width: 60px;
   height: 60px;
@@ -860,11 +840,11 @@ body .hide {
   background: url(../resource/icon/camping.png) no-repeat center;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .tema ul li:nth-of-type(1) p.active {
+body .hide .m-filter .m-content .filter .tema ul li:nth-of-type(1) p.active {
   background: url(../resource/icon/camping-w.png) no-repeat center #0E141C;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .tema ul li:nth-of-type(2) p {
+body .hide .m-filter .m-content .filter .tema ul li:nth-of-type(2) p {
   font-size: 0;
   width: 60px;
   height: 60px;
@@ -874,11 +854,11 @@ body .hide {
   background: url(../resource/icon/glamping.png) no-repeat center;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .tema ul li:nth-of-type(2) p.active {
+body .hide .m-filter .m-content .filter .tema ul li:nth-of-type(2) p.active {
   background: url(../resource/icon/glamping-w.png) no-repeat center #0E141C;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .tema ul li:nth-of-type(3) p {
+body .hide .m-filter .m-content .filter .tema ul li:nth-of-type(3) p {
   font-size: 0;
   width: 60px;
   height: 60px;
@@ -888,11 +868,11 @@ body .hide {
   background: url(../resource/icon/caravan.png) no-repeat center;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .tema ul li:nth-of-type(3) p.active {
+body .hide .m-filter .m-content .filter .tema ul li:nth-of-type(3) p.active {
   background: url(../resource/icon/caravan-w.png) no-repeat center #0E141C;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .tema ul li:nth-of-type(4) p {
+body .hide .m-filter .m-content .filter .tema ul li:nth-of-type(4) p {
   font-size: 0;
   width: 60px;
   height: 60px;
@@ -902,15 +882,15 @@ body .hide {
   background: url(../resource/icon/car.png) no-repeat center;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .tema ul li:nth-of-type(4) p.active {
+body .hide .m-filter .m-content .filter .tema ul li:nth-of-type(4) p.active {
   background: url(../resource/icon/car-w.png) no-repeat center #0E141C;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .subject {
+body .hide .m-filter .m-content .filter .subject {
   margin-bottom: 20%;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .subject .title {
+body .hide .m-filter .m-content .filter .subject .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -922,7 +902,7 @@ body .hide {
   border-bottom: 1px solid #4F4F4F;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .subject .title .icon {
+body .hide .m-filter .m-content .filter .subject .title .icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -931,7 +911,7 @@ body .hide {
           align-items: center;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .subject .title .icon p {
+body .hide .m-filter .m-content .filter .subject .title .icon p {
   font-size: 0%;
   width: 30px;
   height: 30px;
@@ -939,7 +919,7 @@ body .hide {
   margin-right: 10px;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .subject .title span {
+body .hide .m-filter .m-content .filter .subject .title span {
   font-size: 0%;
   width: 30px;
   height: 30px;
@@ -949,11 +929,11 @@ body .hide {
   background-size: 50%;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .subject .text.active5 {
+body .hide .m-filter .m-content .filter .subject .text.active5 {
   display: none;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .subject .text .text1 {
+body .hide .m-filter .m-content .filter .subject .text .text1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -962,7 +942,7 @@ body .hide {
           justify-content: center;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .subject .text .text1 p {
+body .hide .m-filter .m-content .filter .subject .text .text1 p {
   width: 80px;
   height: 30px;
   border: 1px solid #4F4F4F;
@@ -980,12 +960,12 @@ body .hide {
   margin: 2%;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .subject .text .text1 .active {
+body .hide .m-filter .m-content .filter .subject .text .text1 .active {
   background-color: #0E141C;
   color: #fff;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .subject .text .text2 {
+body .hide .m-filter .m-content .filter .subject .text .text2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -994,7 +974,7 @@ body .hide {
           justify-content: center;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .subject .text .text2 p {
+body .hide .m-filter .m-content .filter .subject .text .text2 p {
   width: 60px;
   height: 30px;
   border: 1px solid #4F4F4F;
@@ -1012,12 +992,12 @@ body .hide {
   margin: 2%;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .subject .text .text2 .active {
+body .hide .m-filter .m-content .filter .subject .text .text2 .active {
   background-color: #0E141C;
   color: #fff;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .btn {
+body .hide .m-filter .m-content .filter .btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1026,7 +1006,7 @@ body .hide {
           justify-content: center;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .btn a {
+body .hide .m-filter .m-content .filter .btn a {
   font-size: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1045,46 +1025,47 @@ body .hide {
   margin: 0 2%;
 }
 
-.mobile-main main {
+/*main*/
+main {
   width: 100%;
   padding: 0% 5%;
 }
 
-.mobile-main main h2 {
+main h2 {
   font-size: 30px;
   margin: 10% 0%;
 }
 
-.mobile-main main h2 p {
+main h2 p {
   font-size: 30px;
 }
 
-.mobile-main main .m-main {
+main .m-main {
   margin-bottom: 10%;
 }
 
-.mobile-main main .m-main .m-img {
+main .m-main .m-img {
   width: 100%;
   height: 50vw;
   overflow: hidden;
 }
 
-.mobile-main main .m-main .m-img img {
+main .m-main .m-img img {
   width: 100%;
   height: 100%;
 }
 
-.mobile-main main .m-main .m-title {
+main .m-main .m-title {
   margin: 3% 0;
 }
 
-.mobile-main main .m-main .m-title h3 {
+main .m-main .m-title h3 {
   font-weight: 400;
   font-size: 14px;
   margin-bottom: 1%;
 }
 
-.mobile-main main .m-main .m-title .ad {
+main .m-main .m-title .ad {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1093,12 +1074,12 @@ body .hide {
           justify-content: space-between;
 }
 
-.mobile-main main .m-main .m-title .ad p:nth-of-type(1) {
+main .m-main .m-title .ad p:nth-of-type(1) {
   color: #284257;
   font-size: 12px;
 }
 
-.mobile-main main .m-main .m-title .ad p:nth-of-type(2) {
+main .m-main .m-title .ad p:nth-of-type(2) {
   display: block;
   font-size: 0%;
   width: 18px;
@@ -1107,22 +1088,22 @@ body .hide {
   background-size: 100%;
 }
 
-.mobile-main main .m-main .m-title .info {
+main .m-main .m-title .info {
   position: relative;
 }
 
-.mobile-main main .m-main .m-title .info p {
+main .m-main .m-title .info p {
   font-size: 12px;
   color: #BDBDBD;
   margin-bottom: 2%;
 }
 
-.mobile-main main .m-main .m-title .info p span {
+main .m-main .m-title .info p span {
   font-size: 12px;
   color: #0E141C;
 }
 
-.mobile-main main .m-main .m-title .info .arrow1 {
+main .m-main .m-title .info .arrow1 {
   font-size: 0%;
   width: 20px;
   height: 20px;
@@ -1135,26 +1116,26 @@ body .hide {
   background-size: 100%;
 }
 
-.mobile-main main .m-main .m-title .info-on {
+main .m-main .m-title .info-on {
   display: none;
 }
 
-.mobile-main main .m-main .m-title .info-on.active1 {
+main .m-main .m-title .info-on.active1 {
   display: block;
 }
 
-.mobile-main main .m-main .m-title .info-on p {
+main .m-main .m-title .info-on p {
   font-size: 12px;
   color: #BDBDBD;
   margin-bottom: 2%;
 }
 
-.mobile-main main .m-main .m-title .info-on p span {
+main .m-main .m-title .info-on p span {
   font-size: 12px;
   color: #0E141C;
 }
 
-.mobile-main main .m-main .m-title .info-on a .btn {
+main .m-main .m-title .info-on a .btn {
   font-size: 14px;
   margin-top: 5%;
   padding: 2%;
@@ -1164,7 +1145,7 @@ body .hide {
   border-radius: 10px;
 }
 
-.mobile-main main .m-page {
+main .m-page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1174,12 +1155,13 @@ body .hide {
   padding: 5% 0 10% 0;
 }
 
-.mobile-main main .m-page p {
+main .m-page p {
   font-size: 12px;
   padding: 0 1%;
 }
 
-.mobile-main .f-mobile {
+/*footer*/
+.f-mobile {
   background-color: #0E141C;
   color: #fff;
   width: 100%;
@@ -1193,31 +1175,31 @@ body .hide {
           flex-direction: column-reverse;
 }
 
-.mobile-main .f-mobile .info {
+.f-mobile .info {
   text-align: center;
 }
 
-.mobile-main .f-mobile .info ul {
+.f-mobile .info ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.mobile-main .f-mobile .info ul li {
+.f-mobile .info ul li {
   margin-right: 8%;
   font-size: 0.3vw;
 }
 
-.mobile-main .f-mobile .info p:nth-of-type(1) {
+.f-mobile .info p:nth-of-type(1) {
   margin: 3% 0;
   font-size: 0.3vw;
 }
 
-.mobile-main .f-mobile .info p:nth-of-type(2) {
+.f-mobile .info p:nth-of-type(2) {
   font-size: 0.3vw;
 }
 
-.mobile-main .f-mobile h2 {
+.f-mobile h2 {
   font-family: 'Poiret One', cursive;
   font-size: 6vw;
   font-weight: 300;

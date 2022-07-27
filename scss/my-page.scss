@@ -5,10 +5,10 @@ body{
     header{color: #0E141C;
             .right{
                 a:nth-of-type(1){
-                    right: 8%;
+                    right: 15%;
                 }
                 a:nth-of-type(3){
-                    right: 2%;
+                    right: 8.5%;
                     display: none;
                 }
                 a:nth-of-type(4){
@@ -22,16 +22,24 @@ body{
             width: 70%;
             margin: 0 auto;
             display: flex;
+            justify-content: space-around;
             align-items: center;
-            .thumbnail-img{
-                background-color: #132839;
-                background-size: 100%;
-                font-size: 0%; width: 5vw; height: 5vw;
-                border-radius: 100%;
-                margin: 2%;
+            .profile{
+                display: block;
+                width: 10%;
+                margin: 2vw auto;
+                .thumbnail-img{
+                    display: block;
+                    margin: 0 auto;
+                    background-color: #132839;
+                    background-size: 100%;
+                    font-size: 0%; width: 5vw; height: 5vw;
+                    border-radius: 100%;
                 }
-                .id{font-size: 1.2vw; font-weight: 600; margin-top: 0.5vw; color: #000;}
-                .hi{font-size: 1.2vw; font-weight: 400; margin-top: 0.5vw; color: #000;}
+                .id{font-size: 1.1vw; font-weight: 600; margin-top: 0.5vw; color: #000;}
+                p{color: #595959; text-align: center; font-size: 0.8vw;
+                &:last-of-type{text-decoration: none; cursor: pointer;}}
+            }
         }
         .count{
             width: 90%;
@@ -47,31 +55,14 @@ body{
 
         hr{width: 70%; color: #284257;}
 
-<<<<<<< HEAD
         .my-nav{width: 70%; margin: 3% auto; display: flex; justify-content: center;
             p{
                 text-decoration: none; cursor: pointer;
                 font-size: 1vw;
                 &.active{font-weight: 500; color: #132839;}
-=======
-        //수정
-        .thum-wrap{
-            margin-bottom: 5%;
-            .my-nav{width: 70%; margin: 3% auto; display: flex; justify-content: center;
-                p{
-                    text-decoration: none; cursor: pointer;
-                    font-size: 1vw; font-weight: 600;
-                }
-            }
-            .thumnail{
-                display: flex;
-                width: 70%; margin: 0 auto; padding: 0;
-                li{
-                    margin: 1.5%; 
-                }
->>>>>>> bora
             }
         }
+        .thumnail{width: 70%; margin: 0 auto; padding: 0;}
         .button{
             width: 100%; 
             display: flex; 
