@@ -604,6 +604,14 @@ img {
   padding-right: 10px;
 }
 
+.mobile .menu a:nth-of-type(3) {
+  display: none;
+}
+
+.mobile .menu a:nth-of-type(4) {
+  display: none;
+}
+
 /*filter*/
 body {
   width: 100%;

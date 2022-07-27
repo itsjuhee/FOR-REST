@@ -5,11 +5,21 @@ function login(){
         $('.right a').eq(1).css('display','none'); //LOGIN
         $('.right a').eq(2).show(); //MY PAGE
         $('.right a').eq(3).show();//LOGOUT
-        
+
+        $('.menu a').eq(1).css('display','none'); //LOGIN
+        $('.menu a').eq(2).show(); //MY PAGE
+<<<<<<< Updated upstream
+        // $('.menu a').eq(3).show(); //LOGOUT
+=======
+        $('.menu a').eq(3).show(); //LOGOUT
+>>>>>>> Stashed changes
+
         let bora = sessionStorage.thumbnail;
 
         $('.id').text(`${sessionStorage.name}`);
         $('.thumbnail-img').css('background-image', `url( ${bora} )`);
+
+        $('.main-name').text(`${sessionStorage.name}`+`님,`); //모바일 메인
     }else{//로그인 안했을때 
         $('.right a').eq(1).show(); //LOGIN
         $('.right a').eq(2).css('display','none'); //MA PAGE
