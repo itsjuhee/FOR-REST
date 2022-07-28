@@ -30,6 +30,32 @@
             h2 {color: #fff;}
         }
     }
+    header.white {
+        position: fixed;
+        width: 100%;
+        color: #0E141C;
+        div {
+            .left {
+                display: none;
+                a {color: #0E141C;}
+            }
+            .right {
+                a {color: #0E141C;}
+                // MY PAGE
+                a:nth-of-type(3){
+                    // display: none;
+                    right: 2%;
+                }
+                // LOGOUT
+                a:nth-of-type(4){
+                    display: none;
+                }
+            }
+        }
+        a{
+            h2 {color: #0E141C;}
+        }
+    }
     
     .title {
         h3 {

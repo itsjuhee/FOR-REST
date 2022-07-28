@@ -327,6 +327,10 @@ footer h2 {
   background: url(../resource/icon/bi_heart-navy.png) no-repeat center;
 }
 
+.popup-shadow .popup-all .popup .p-main .popup-txt .popup-title .heart1.active {
+  background: url(../resource/icon/heart-navy.png) no-repeat center;
+}
+
 .popup-shadow .popup-all .popup .p-main .popup-txt hr {
   margin: 2% 0;
   background-color: #2842576e;
@@ -600,6 +604,36 @@ img {
 
 .web-main header a h2 {
   color: #fff;
+}
+
+.web-main header.white {
+  position: fixed;
+  width: 100%;
+  color: #0E141C;
+}
+
+.web-main header.white div .left {
+  display: none;
+}
+
+.web-main header.white div .left a {
+  color: #0E141C;
+}
+
+.web-main header.white div .right a {
+  color: #0E141C;
+}
+
+.web-main header.white div .right a:nth-of-type(3) {
+  right: 2%;
+}
+
+.web-main header.white div .right a:nth-of-type(4) {
+  display: none;
+}
+
+.web-main header.white a h2 {
+  color: #0E141C;
 }
 
 .web-main .title h3 {
