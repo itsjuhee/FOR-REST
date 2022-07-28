@@ -1,10 +1,4 @@
 function mobileInit(){
-    // 자세히 보기
-    $('.info-on .btn').on('click', function(){
-        // location.href = './popup.html';
-        $('.popup-shadow').addClass('active')
-    })
-
     /*필터 나타나기*/
     $('.m-icon').click(function(){
         $('.m-filter').toggleClass('active');
