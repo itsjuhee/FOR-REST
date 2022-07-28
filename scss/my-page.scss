@@ -1,7 +1,6 @@
 @import "_common";
 
 body{
-
     header{color: #0E141C;
             .right{
                 a:nth-of-type(1){
@@ -19,14 +18,14 @@ body{
 
     main{
         .my-page{
-            width: 70%;
+            width: 75%;
             margin: 0 auto;
             display: flex;
             align-items: center;
             .thumbnail-img{
                 background-color: #132839;
                 background-size: 100%;
-                font-size: 0%; width: 5vw; height: 5vw;
+                font-size: 0%; width: 7vw; height: 7vw;
                 border-radius: 100%;
                 margin: 2%;
                 }
@@ -45,12 +44,11 @@ body{
             }
         }
 
-        hr{width: 70%; color: #284257;}
+        hr{width: 75%; color: #284257;}
 
-        //수정
         .thum-wrap{
             margin-bottom: 5%;
-            .my-nav{width: 70%; margin: 3% auto; display: flex; justify-content: center;
+            .my-nav{width: 80%; margin: 3% auto; display: flex; justify-content: center;
                 p{
                     text-decoration: none; cursor: pointer;
                     font-size: 1vw; font-weight: 600;
@@ -58,7 +56,7 @@ body{
             }
             .thumnail{
                 display: flex;
-                width: 70%; margin: 0 auto; padding: 0;
+                width: 80%; margin: 0 auto; padding: 0;
                 li{
                     margin: 1.5%; 
                 }
@@ -80,7 +78,77 @@ body{
                 &.active{color: #132839; font-weight: 600;}
             }
         }
-    }
+    }   
+}
+
+//mobile
+
+/*header*/
+.mobile{
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%; height: 60px;
+        background-color:#0E141C;
+        padding: 2%;
+        a {
+            h2 {
+                color: #fff;
+                font-family: 'Poiret One', cursive;
+                font-size: 20px; font-weight: 300;
+            }
+        }
+        .menu{
+            display: flex;
+            a{
+                color: #fff;
+                font-family: 'Poiret One', cursive;
+                font-size: 12px;
+                padding-right:10px;
+            }
+            a:nth-of-type(3){
+                display: none;
+            }
+            a:nth-of-type(4){
+                display: none;
+            }
+        }
 }
 
 .heart{background: url(../resource/icon/heart-white.png);}
+
+@media (max-width: 767px) {
+    header {display: none;}
+    footer {display: none;}
+
+    .mobile{
+        display: flex;
+    }
+
+    main{
+        margin-top: 5%;
+        .my-page{
+            .thumbnail-img{
+                width: 10vw; height: 10vw;
+            }
+        }
+        .thum-wrap{
+            .my-nav{
+                p{font-size: 15vw;}
+            }
+        }
+        .thumnail{
+            width: 75%;
+            li{
+                width: 45%; height: 36vw;
+            }
+        }
+    }
+
+    .heart{
+        background: url(../resource/icon/heart-white.png);
+        background-size: 70%;
+        background-repeat: no-repeat;
+        right: -2%; top: 7%; 
+    }
+}

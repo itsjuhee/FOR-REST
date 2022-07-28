@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="scss/web-sub-todaycamping.css">
-
+    
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=e7d9d90ebcf1a4d40b424301d24b5c77&libraries=services"></script>
     <script defer src="./script/today-api.js"></script>
-    <script defer src="./script/totay.js"></script>
+    <script defer src="./script/common.js"></script>
     <title>FOR#REST</title>
 </head>
 <body>
@@ -20,39 +19,37 @@
         <a href="./index.html"><h2>FOR#REST</h2></a>
         <div>
             <nav class="left">
-                <a onclick="goBack()">BACK</a>
+                <a href="./index.html">BACK</a>
             </nav>
             <nav class="right">
-                <a href="./commnunity.html">COMMUNITY</a>
-                <a href="javascript:loginWithKakao();" >LOGIN</a>
+                <a>COMMUNITY</a>
                 <a href="./my-page.html">MY PAGE</a>
-                <a href="javascript:kakaoLogout();" >LOGOUT</a>
             </nav>
         </div>
     </header>
 
     <main>
         <div class="visual">
-            <img src="resource/img/main-today01.jpg" alt="dog">
+            <img src="resource/img/main-today02.jpg" alt="sea">
             <div class="shadow"></div>
             <div class="visual-text">
-                <p>반려동물 동반 가능 캠핑장</p>
-                <h3>댕댕이와 함께 갈 수 있다면</h3>
+                <p>바다를 가까이서 느낄 수 있는</p>
+                <h3>바다야 우리와 같이 놀아</h3>
             </div>
         </div>
         
         <div class="v-text">
             <p>
-                같이 갈 곳은 한정되어 있어 매번 찾아보고 찾아보고 또 찾아봐야하는 번거러움을 덜어드리기 위해<br>
-                포레스트는 반려동물 동반 캠핑장 중에서도 강아지가 편하게 지낼 수 있고 애견친화적이며 관리가 철저히 지켜지는 캠핑장들을 선정했습니다.
+                탁 트인 바다에서 즐기는 오션뷰 캠핑!<br>
+                답답한 일상에서 벗어나 뻥- 뚫린 오션뷰 캠핑장에서 눈도 마음도 힐링하며 행복은 배로 더하자
             </p>
             <p>
                 <b>
-                    하지만 반려동물 동반이 가능한 캠핑장에서도 애견매너는 지켜주셔야 합니다.<br>
-                    반려동물 동반 캠핑장이라 해도 일반 고객분들도 계시니 목줄과 배변처리는 필수!
+                    이제는 불멍보다는 물멍! 바다와 함께하는 캠핑,<br>
+                    포레스트에서 추천해드리는 오션뷰 캠핑장을 만나보세요!
                 </b>
             </p>
-            <p>* 캠핑장별 사이트별 강아지 키로수 별 예약이 불가능한 경우도 있으니 예약시 주의바랍니다.</p>
+            <!-- <p>* 캠핑장별 사이트별 강아지 키로수 별 예약이 불가능한 경우도 있으니 예약시 주의바랍니다.</p> -->
         </div>
 
         <ul class="thumnail">
