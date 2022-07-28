@@ -95,6 +95,7 @@ $.ajax({
 
         printFn(data.response.body.items.item);
         
+
         // 적용하기 버튼
         $('.main-wrap2 .filter .btn a:nth-of-type(1)').on('click', function(){
             let dd=[];
@@ -252,7 +253,7 @@ $.ajax({
                                     </div>
                                 </div>
                             </div>`;
-    
+
                 // map 주소 변경
                 let mapLocation = `${pop[0].addr1}`;
                 
@@ -260,7 +261,6 @@ $.ajax({
                 $('.popup-shadow').addClass('active');
     
                 // map
-                
                 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
                 mapOption = {
                     center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
@@ -298,15 +298,25 @@ $.ajax({
                         map.setCenter(coords);
                     } 
                 });
-                
+
+                let heart = [];
+                // localStorage
+                localStorage.setItem('heart', code);
+
+                // heart
+                $('.heart1').on('click', function(){
+                    $(this).toggleClass('active');
+                    if($(this).hasClass('active')) heart.push(code);
+                })
+
                 // popup arrow
                 $('.popup-arrow .arrow').eq(0).on('click', function(){
                     if(idx>0) idx--;
-                    popupSlide(idx)
+                    popupSlide(idx);
                 })
                 $('.popup-arrow .arrow').eq(1).on('click', function(){
                     if(idx<8) idx++;
-                    popupSlide(idx)
+                    popupSlide(idx);
                 })
 
                 // popup close

@@ -89,11 +89,12 @@ footer {
 
 // icon
 
-.heart{
+.heart {
     font-size: 0%; width: 30px; height: 30px;
     position: absolute; top: 4%; right: 4%;
     background: url(../resource/icon/bi_heart.png) no-repeat center;
 }
+
 .comment {
     font-size: 0%; width: 30px; height: 30px;
     background: url(../resource/icon/comment.png) no-repeat center;
@@ -203,6 +204,9 @@ footer {
                             display: block;
                             font-size: 0%; width: 30px; height: 30px;
                             background: url(../resource/icon/bi_heart-navy.png) no-repeat center;
+                            &.active {
+                                background: url(../resource/icon/heart-navy.png) no-repeat center;
+                            }
                         }
                     }
                     hr{
