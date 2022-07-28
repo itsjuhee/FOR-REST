@@ -17,6 +17,7 @@ body{
     }}
 
     main{
+<<<<<<< Updated upstream
         .my-page{
             width: 75%;
             margin: 0 auto;
@@ -31,6 +32,32 @@ body{
                 }
                 .id{font-size: 1.2vw; font-weight: 600; margin-top: 0.5vw; color: #000;}
                 .hi{font-size: 1.2vw; font-weight: 400; margin-top: 0.5vw; color: #000;}
+=======
+        .my-page{ //수정
+            width: 70%;
+            display: flex;
+            align-items: center;
+            .profile{ 
+                display: flex; 
+                align-items: center;
+                width: 40%;
+                margin: 2vw 15vw;
+                .thumbnail-img{
+                    display: block;
+                    margin-right:5%;
+                    background-color: #132839;
+                    background-size: 100%;
+                    font-size: 0%; width: 5vw; height: 5vw;
+                    border-radius: 100%;
+                }
+                .id{
+                    font-size: 1.2vw; font-weight: 600; margin-top: 0.5vw; color: #000;
+                }
+                .hi{
+                    font-size: 1.2vw; font-weight: 300; margin-top: 0.5vw; color: #000;
+                }
+            }
+>>>>>>> Stashed changes
         }
         .count{
             width: 90%;
