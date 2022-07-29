@@ -259,6 +259,9 @@ footer h2 {
   height: 30px;
   background: url(../resource/icon/bi_heart-navy.png) no-repeat center;
 }
+.popup-shadow .popup-all .popup .p-main .popup-txt .popup-title .heart1.active {
+  background: url(../resource/icon/heart-navy.png) no-repeat center;
+}
 .popup-shadow .popup-all .popup .p-main .popup-txt hr {
   margin: 2% 0;
   background-color: rgba(40, 66, 87, 0.431372549);

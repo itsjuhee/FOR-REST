@@ -30,32 +30,6 @@
             h2 {color: #fff;}
         }
     }
-    header.white {
-        position: fixed;
-        width: 100%;
-        color: #0E141C;
-        div {
-            .left {
-                display: none;
-                a {color: #0E141C;}
-            }
-            .right {
-                a {color: #0E141C;}
-                // MY PAGE
-                a:nth-of-type(3){
-                    // display: none;
-                    right: 2%;
-                }
-                // LOGOUT
-                a:nth-of-type(4){
-                    display: none;
-                }
-            }
-        }
-        a{
-            h2 {color: #0E141C;}
-        }
-    }
     
     .title {
         h3 {
@@ -77,6 +51,32 @@
     main {
         .main-bg {
             width: 100%; 
+            position: relative;
+            p {
+                position: absolute; top: 50%; right: 10%;
+                transform: translateY(-50%);
+                font-size: 3vw;
+                font-family: 'Poiret One', cursive;
+                color: #fff;
+            }
+            div {
+                width: 20%;
+                position: absolute; top: 60%; right: 6%;
+                transform: translateY(-50%);
+                display: flex;
+                align-items: flex-start;
+                span {
+                    font-size: 1.2vw; font-weight: 300;
+                    font-family: 'Poiret One', cursive;
+                    color: #fff;
+                }
+                .click {
+                    margin-left: 2%;
+                    width: 40px; height: 40px;
+                    background: url(../resource/icon/hand-click.png) no-repeat center;
+                }
+
+            }
             img {
                 width: 100%;
             }
