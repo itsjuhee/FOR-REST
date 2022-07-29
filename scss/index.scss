@@ -30,32 +30,6 @@
             h2 {color: #fff;}
         }
     }
-    header.white {
-        position: fixed;
-        width: 100%;
-        color: #0E141C;
-        div {
-            .left {
-                display: none;
-                a {color: #0E141C;}
-            }
-            .right {
-                a {color: #0E141C;}
-                // MY PAGE
-                a:nth-of-type(3){
-                    // display: none;
-                    right: 2%;
-                }
-                // LOGOUT
-                a:nth-of-type(4){
-                    display: none;
-                }
-            }
-        }
-        a{
-            h2 {color: #0E141C;}
-        }
-    }
     
     .title {
         h3 {
@@ -77,8 +51,30 @@
     main {
         .main-bg {
             width: 100%; 
-            img {
-                width: 100%;
+            position: relative;
+            p {
+                position: absolute; top: 50%; right: 10%;
+                transform: translateY(-50%);
+                font-size: 3vw;
+                font-family: 'Poiret One', cursive;
+                color: #fff;
+            }
+            div {
+                width: 20%;
+                position: absolute; top: 60%; right: 6%;
+                transform: translateY(-50%);
+                display: flex;
+                align-items: flex-start;
+                span {
+                    font-size: 1.2vw; font-weight: 300;
+                    font-family: 'Poiret One', cursive;
+                    color: #fff;
+                }
+                .click {
+                    margin-left: 2%;
+                    width: 40px; height: 40px;
+                    background: url(../resource/icon/hand-click.png) no-repeat center;
+                }
             }
         }
         .hot {
@@ -552,7 +548,6 @@
                                         background: url(../resource/icon/subject.png) no-repeat center;
                                         margin-right: 10px;
                                     }
-                                    h3{}
                                 }
                                 span{
                                     font-size: 0%; width: 30px; height: 30px;
@@ -562,44 +557,20 @@
                                 }
                             }
                             .text{
-                                &.active5{
-                                    display: none;
+                                // display: none;
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: center;
+                                p{
+                                    padding: 2% 5%;
+                                    margin:2%;
+                                    border: 1px solid #4F4F4F;
+                                    border-radius: 5px;
+                                    font-size: 14px;
                                 }
-                                .text1{
-                                    display: flex;
-                                    justify-content: center;
-                                    p{
-                                        width: 80px; height: 30px;
-                                        border: 1px solid #4F4F4F;
-                                        border-radius: 5px;
-                                        font-size: 14px;
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                        margin:2%;
-                                    }
-                                    .active{
-                                        background-color: #0E141C;
-                                        color: #fff;
-                                    }
-                                }
-                                .text2{
-                                    display: flex;
-                                    justify-content: center;
-                                    p{
-                                        width: 60px; height: 30px;
-                                        border: 1px solid #4F4F4F;
-                                        border-radius: 5px;
-                                        font-size: 14px;
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                        margin:2%;
-                                    }
-                                    .active{
-                                        background-color: #0E141C;
-                                        color: #fff;
-                                    }
+                                .active{
+                                    background-color: #0E141C;
+                                    color: #fff;
                                 }
                             }
                         }
@@ -624,8 +595,6 @@
                 
             }
         }
-    
-    
     
     /*main*/
     main{
@@ -738,6 +707,21 @@
             }
         }
     }
+
+    .top{
+        position: fixed;
+        width: 30px; height: 30px;
+        background-color: #0E141C;
+        background-image: url("../resource/icon/bx_chevron-up.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        right: 4%; bottom: 4%;
+        transform: translateY(-200%);
+        border-radius: 50px;
+        a{
+            font-size: 0;
+        }
+    }
     
     /*footer*/
     .f-mobile {
@@ -780,6 +764,15 @@
 
 
 
+// .popup-shadow {
+//     position: absolute; 
+//     &.active {
+//         display: block;
+//         .popup-all {
+//             position: absolute; top: 0%;
+//         }
+//     }
+// }
 @media (max-width: 767px) {
     .web-main {display: none;}
     .mobile-main {display: block;}

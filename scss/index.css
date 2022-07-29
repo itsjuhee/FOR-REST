@@ -447,11 +447,16 @@ footer h2 {
 
 @media (max-width: 767px) {
   .popup-shadow {
+    display: none;
     width: 100%;
     height: 100%;
     position: static;
     background-color: none;
     z-index: 100;
+    overflow: auto;
+  }
+  .popup-shadow.active {
+    display: block;
   }
   .popup-shadow .popup-all {
     width: 100vw;
@@ -494,6 +499,9 @@ footer h2 {
     width: 20px;
     height: 20px;
     background: url(../resource/icon/bi_heart-navy-small.png) no-repeat center;
+  }
+  .popup-shadow .popup-all .popup .p-main .popup-txt .popup-title .heart1.active {
+    background: url(../resource/icon/heart-navy-small.png) no-repeat center;
   }
   .popup-shadow .popup-all .popup .p-main .popup-txt .popup-main {
     -webkit-box-orient: vertical;
@@ -606,36 +614,6 @@ img {
   color: #fff;
 }
 
-.web-main header.white {
-  position: fixed;
-  width: 100%;
-  color: #0E141C;
-}
-
-.web-main header.white div .left {
-  display: none;
-}
-
-.web-main header.white div .left a {
-  color: #0E141C;
-}
-
-.web-main header.white div .right a {
-  color: #0E141C;
-}
-
-.web-main header.white div .right a:nth-of-type(3) {
-  right: 2%;
-}
-
-.web-main header.white div .right a:nth-of-type(4) {
-  display: none;
-}
-
-.web-main header.white a h2 {
-  color: #0E141C;
-}
-
 .web-main .title h3 {
   font-size: 1.2vw;
   font-weight: 400;
@@ -663,10 +641,47 @@ img {
 
 .web-main main .main-bg {
   width: 100%;
+  position: relative;
 }
 
-.web-main main .main-bg img {
-  width: 100%;
+.web-main main .main-bg p {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 3vw;
+  font-family: 'Poiret One', cursive;
+  color: #fff;
+}
+
+.web-main main .main-bg div {
+  width: 20%;
+  position: absolute;
+  top: 60%;
+  right: 6%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.web-main main .main-bg div span {
+  font-size: 1.2vw;
+  font-weight: 300;
+  font-family: 'Poiret One', cursive;
+  color: #fff;
+}
+
+.web-main main .main-bg div .click {
+  margin-left: 2%;
+  width: 40px;
+  height: 40px;
+  background: url(../resource/icon/hand-click.png) no-repeat center;
 }
 
 .web-main main .hot {
@@ -1482,70 +1497,26 @@ img {
   background-size: 50%;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .subject .text.active5 {
-  display: none;
-}
-
-.mobile-main .hide .m-filter .m-content .filter .subject .text .text1 {
+.mobile-main .hide .m-filter .m-content .filter .subject .text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .subject .text .text1 p {
-  width: 80px;
-  height: 30px;
+.mobile-main .hide .m-filter .m-content .filter .subject .text p {
+  padding: 2% 5%;
+  margin: 2%;
   border: 1px solid #4F4F4F;
   border-radius: 5px;
   font-size: 14px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 2%;
 }
 
-.mobile-main .hide .m-filter .m-content .filter .subject .text .text1 .active {
-  background-color: #0E141C;
-  color: #fff;
-}
-
-.mobile-main .hide .m-filter .m-content .filter .subject .text .text2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.mobile-main .hide .m-filter .m-content .filter .subject .text .text2 p {
-  width: 60px;
-  height: 30px;
-  border: 1px solid #4F4F4F;
-  border-radius: 5px;
-  font-size: 14px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 2%;
-}
-
-.mobile-main .hide .m-filter .m-content .filter .subject .text .text2 .active {
+.mobile-main .hide .m-filter .m-content .filter .subject .text .active {
   background-color: #0E141C;
   color: #fff;
 }
@@ -1739,6 +1710,25 @@ img {
 .mobile-main main .m-page p {
   font-size: 12px;
   padding: 0 1%;
+}
+
+.mobile-main .top {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  background-color: #0E141C;
+  background-image: url("../resource/icon/bx_chevron-up.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 4%;
+  bottom: 4%;
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+  border-radius: 50px;
+}
+
+.mobile-main .top a {
+  font-size: 0;
 }
 
 .mobile-main .f-mobile {

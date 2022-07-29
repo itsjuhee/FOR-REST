@@ -306,10 +306,13 @@ footer {
 
 @media (max-width: 767px) {
     .popup-shadow {
+        display: none;
+        &.active {display: block;}
         width: 100%; height: 100%;
         position: static;
         background-color: none;
         z-index: 100;
+        overflow: auto;
         .popup-all {
             width: 100vw;
             .close {
@@ -337,6 +340,9 @@ footer {
                                 display: block;
                                 font-size: 0%; width: 20px; height: 20px;
                                 background: url(../resource/icon/bi_heart-navy-small.png) no-repeat center;
+                                &.active {
+                                    background: url(../resource/icon/heart-navy-small.png) no-repeat center;
+                                }
                             }
                         }
                         .popup-main {

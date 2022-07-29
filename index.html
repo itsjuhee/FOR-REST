@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FOR#REST</title>
 
-    <link href="./scss/index.css" rel="stylesheet">
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script> <!--SDK 포함하기-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script defer src="./script/common.js"></script>
     <script defer src="./script/index.js"></script>
     <script defer src="./script/m-main.js"></script>
+    <script defer src="./script/index-api.js"></script>
+    <link href="./scss/index.css" rel="stylesheet">
 
 </head>
 <body>
@@ -35,8 +36,15 @@
     <main>
         <div class="main-bg">
             <a href="./search.html">
-                <img src="./resource/img/main-bg.jpg" alt="main-bg"></div>
+                <p>Hello, camper</p>
+                <div>
+                    <span>Let’s go to find a camping site</span>
+                    <span class="click"></span>
+                </div>
+                <img src="./resource/img/main-bg.jpg" alt="main-bg">
             </a>
+        </div>
+        
         <div class="hot">
     
             <div class="title">
@@ -293,11 +301,10 @@
                 </li>
                 <li>
                     <div class="txt">
-                        <span>바다를 가까이서 느낄 수 있는 </span>
-                        <p>바다야 우리와 같이 놀아</p>
+                        <span>캠핑 잘 몰라요...</span>
+                        <p>몸만 가면되는 수도권 글램핑</p>
                     </div>
                     <div class="shadow">
-                        <a href="./web-sub-todaycamping2.html">
                         <img src="./resource/img/main-today02.jpg" alt="main-today02.jpg">
                     </div>
                 </li>
@@ -307,7 +314,6 @@
                         <p>오늘갔다 오늘옵시다</p>
                     </div>
                     <div class="shadow">
-                        <a href="./web-sub-todaycamping3.html">
                         <img src="./resource/img/main-today03.jpg" alt="main-today03.jpg">
                     </div>
                 </li>
@@ -340,7 +346,7 @@
 
 <div class="mobile-main">
     <header class="mobile">
-        <a href="./index.html"><h2>FOR#REST</h2></a>
+        <a href="./m-main.html"><h2>FOR#REST</h2></a>
 
         <nav class="menu">
             <a>COMMUNITY</a>
@@ -423,7 +429,7 @@
                         </div>
 
                         <ul>
-                            <li><p class="active">icon</p>캠핑</li>
+                            <li><p>icon</p>캠핑</li>
                             <li><p>icon</p>글램핑</li>
                             <li><p>icon</p>카라반</li>
                             <li><p>icon</p>차박</li>
@@ -440,24 +446,17 @@
                         </div>
         
                         <div class="text">
-                            <div class="text1">
-                                <p class="active">바다</p>
-                                <p>산</p>
-                                <p>강</p>
-                            </div>
-        
-                            <div class="text2">
-                                <p>계곡</p>
-                                <p>가족</p>
-                                <p>키즈</p>
-                                <p>연인</p>
-                            </div>
-        
-                            <div class="text1">
-                                <p>반려동물</p>
-                                <p>초보</p>
-                                <p>핫플레이스</p>
-                            </div>
+                            <p>산</p>
+                            <p>숲</p>
+                            <p>계곡</p>
+
+                            <p>레저</p>
+                            <p>물놀이</p>
+                            <p>봄꽃</p>
+                            <p>단풍</p>
+                            <p>일출</p>
+                            <p>일몰</p>
+                            <p>걷기길</p>
                         </div>
                     </div>
         
@@ -473,127 +472,116 @@
     <main>
         <h2>안녕하세요<br><p class="main-name">캠퍼님,</p></h2>
 
-        <div class="m-main">
-            <div class="m-img">
-                <img src="./resource/img/main-img.jpg">
-            </div>
-
-            <div class="m-title">
-                <h3>별빛 캠핑장</h3>
-
-                <div class="ad">
-                        <p>대전 대덕구 대철로344길 300</p>
-                        <p class="m-heart"></p>
+        <div class="mobile-main-wrap">
+            <!-- <div class="m-main">
+                <div class="m-img">
+                    <img src="./resource/img/main-img.jpg">
                 </div>
-                <HR>
-
-                <div class="info">
-                    <div><p class="p">테마</p><span>캠핑</span></div>
-                    <div><p class="p">주제</p><span>#힐링 #밤하늘 #근교캠핑 #가족캠핑</span></div>
-                    <p class="arrow1">아이콘</p>
-                </div>
-
-                <div class="info-on">
-                    <div><p class="p">대표번호</p><span>050-1234-2134</span></div>
-                    <div><p class="p">예약구분</p><span>온라인 실시간 예약</span></div>
-
-                    <!-- <div class="btn"><p>자세히 보기</p></div> -->
-                    <!-- <a href="./popup.html"><p class="btn">자세히 보기</p></a> -->
-                    <p class="btn">자세히 보기</p>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="m-main">
-            <div class="m-img">
-                <img src="./resource/img/main-img.jpg">
-            </div>
-
-            <div class="m-title">
-                <h3>별빛 캠핑장</h3>
-
-                <div class="ad">
-                        <p>대전 대덕구 대철로344길 300</p>
-                        <p class="m-heart"></p>
-                </div>
-                <hr>
-
+    
+                <div class="m-title">
+                    <h3>별빛 캠핑장</h3>
+    
+                    <div class="ad">
+                            <p>대전 대덕구 대철로344길 300</p>
+                            <p class="m-heart"></p>
+                    </div>
+                    <hr>
                     <div class="info">
-                        <div><p class="p">테마</p><span>캠핑</span></div>
-                        <div><p class="p">주제</p><span>#힐링 #밤하늘 #근교캠핑 #가족캠핑</span></div>
+                        <div><p class="p">캠핑형태</p><span>일반야영장</span></div>
+                        <div><p class="p">환경</p><span>산, 계곡</span></div>
                         <p class="arrow1">아이콘</p>
                     </div>
-    
                     <div class="info-on">
                         <div><p class="p">대표번호</p><span>050-1234-2134</span></div>
                         <div><p class="p">예약구분</p><span>온라인 실시간 예약</span></div>
     
                         <p class="btn">자세히 보기</p>
                     </div>
-
-            </div>
-        </div>
-
-        <div class="m-main">
-            <div class="m-img">
-                <img src="./resource/img/main-img.jpg">
-            </div>
-
-            <div class="m-title">
-                <h3>별빛 캠핑장</h3>
-
-                <div class="ad">
-                        <p>대전 대덕구 대철로344길 300</p>
-                        <p class="m-heart"></p>
                 </div>
-                <HR>
-
+            </div>
+    
+            <div class="m-main">
+                <div class="m-img">
+                    <img src="./resource/img/main-img.jpg">
+                </div>
+    
+                <div class="m-title">
+                    <h3>별빛 캠핑장</h3>
+    
+                    <div class="ad">
+                            <p>대전 대덕구 대철로344길 300</p>
+                            <p class="m-heart"></p>
+                    </div>
+                    <hr>
                     <div class="info">
-                        <div><p class="p">테마</p><span>캠핑</span></div>
-                        <div><p class="p">주제</p><span>#힐링 #밤하늘 #근교캠핑 #가족캠핑</span></div>
+                        <div><p class="p">캠핑형태</p><span>일반야영장</span></div>
+                        <div><p class="p">환경</p><span>산, 계곡</span></div>
                         <p class="arrow1">아이콘</p>
                     </div>
-    
                     <div class="info-on">
                         <div><p class="p">대표번호</p><span>050-1234-2134</span></div>
                         <div><p class="p">예약구분</p><span>온라인 실시간 예약</span></div>
     
                         <p class="btn">자세히 보기</p>
                     </div>
-
-            </div>
-        </div>
-
-        <div class="m-main">
-            <div class="m-img">
-                <img src="./resource/img/main-img.jpg">
-            </div>
-
-            <div class="m-title">
-                <h3>별빛 캠핑장</h3>
-
-                <div class="ad">
-                        <p>대전 대덕구 대철로344길 300</p>
-                        <p class="m-heart"></p>
                 </div>
-                <HR>
-
+            </div>
+    
+            <div class="m-main">
+                <div class="m-img">
+                    <img src="./resource/img/main-img.jpg">
+                </div>
+    
+                <div class="m-title">
+                    <h3>별빛 캠핑장</h3>
+    
+                    <div class="ad">
+                            <p>대전 대덕구 대철로344길 300</p>
+                            <p class="m-heart"></p>
+                    </div>
+                    <hr>
                     <div class="info">
-                        <div><p class="p">테마</p><span>캠핑</span></div>
-                        <div><p class="p">주제</p><span>#힐링 #밤하늘 #근교캠핑 #가족캠핑</span></div>
+                        <div><p class="p">캠핑형태</p><span>일반야영장</span></div>
+                        <div><p class="p">환경</p><span>산, 계곡</span></div>
                         <p class="arrow1">아이콘</p>
                     </div>
-    
                     <div class="info-on">
                         <div><p class="p">대표번호</p><span>050-1234-2134</span></div>
                         <div><p class="p">예약구분</p><span>온라인 실시간 예약</span></div>
-
+    
                         <p class="btn">자세히 보기</p>
                     </div>
-
+                </div>
             </div>
+    
+            <div class="m-main">
+                <div class="m-img">
+                    <img src="./resource/img/main-img.jpg">
+                </div>
+    
+                <div class="m-title">
+                    <h3>별빛 캠핑장</h3>
+    
+                    <div class="ad">
+                            <p>대전 대덕구 대철로344길 300</p>
+                            <p class="m-heart"></p>
+                    </div>
+                    <hr>
+                    <div class="info">
+                        <div><p class="p">캠핑형태</p><span>일반야영장</span></div>
+                        <div><p class="p">환경</p><span>산, 계곡</span></div>
+                        <p class="arrow1">아이콘</p>
+                    </div>
+                    <div class="info-on">
+                        <div><p class="p">대표번호</p><span>050-1234-2134</span></div>
+                        <div><p class="p">예약구분</p><span>온라인 실시간 예약</span></div>
+    
+                        <p class="btn">자세히 보기</p>
+                    </div>
+                </div>
+            </div> -->
         </div>
+
 
         <div class="m-page">
             <p>1</p>
@@ -605,7 +593,7 @@
     </main>
 
     <div class="popup-shadow">
-        <div class="popup-all">
+        <!-- <div class="popup-all">
             <div class="popup">
                 <div class="close">닫기</div>
                 
@@ -670,7 +658,12 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+    </div>
+
+    <!--★추가★-->
+    <div class="top">
+        <a>#</a>
     </div>
 
     <footer class="f-mobile">
