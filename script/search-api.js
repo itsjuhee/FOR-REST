@@ -171,7 +171,6 @@ $.ajax({
                         }else{
                             if(e)  dd.push(b);  
                         }
-                        
                     }catch{}
                 })
             });
@@ -180,6 +179,7 @@ $.ajax({
             if($('.main-wrap .title span').html(dd.length)) $('.main-wrap .title p').addClass('active')
 
             printFn(dd);
+            let mypage = [];
 
             // popup
             function popupSlide (idx){
@@ -254,26 +254,23 @@ $.ajax({
                                 </div>
                             </div>`;
 
-                // map 주소 변경
+                // change map address
                 let mapLocation = `${pop[0].addr1}`;
                 
                 $('.popup-shadow').html(popup);
                 $('.popup-shadow').addClass('active');
     
                 // map
-                var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                var mapContainer = document.getElementById('map'),
                 mapOption = {
                     center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
                     level: 3 // 지도의 확대 레벨
                 };  
     
-                // 지도를 생성합니다    
                 var map = new kakao.maps.Map(mapContainer, mapOption); 
     
-                // 주소-좌표 변환 객체를 생성합니다
                 var geocoder = new kakao.maps.services.Geocoder();
     
-                // 주소로 좌표를 검색합니다 !!! 여기 주소 변경 !!!
                 geocoder.addressSearch(mapLocation, function(result, status) {
     
                     // 정상적으로 검색이 완료됐으면 
@@ -299,16 +296,19 @@ $.ajax({
                     } 
                 });
 
-                let heart = [];
-                // localStorage
-                localStorage.setItem('heart', code);
-
                 // heart
-                $('.heart1').on('click', function(){
-                    $(this).toggleClass('active');
-                    if($(this).hasClass('active')) heart.push(code);
-                })
+                $('.heart1').on('click', function(a,b){
 
+                    $(this).toggleClass('active');
+                    
+                    // localStorage
+                    if($(this).hasClass('active')) {
+                        mypage.push(code);
+                        localStorage.setItem('heart', mypage);
+                    }
+                    console.log(mypage)
+                })
+                
                 // popup arrow
                 $('.popup-arrow .arrow').eq(0).on('click', function(){
                     if(idx>0) idx--;
