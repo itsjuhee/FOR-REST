@@ -30,7 +30,16 @@
             h2 {color: #fff;}
         }
     }
-    
+    header.white {
+        background-color: #fff;
+        .left {
+            a {color: #0E141C;}
+        }
+        .right {
+            a {color: #0E141C;}
+        }
+        a {h2{ color: #0E141C;}}
+    }
     .title {
         h3 {
             &::before {
