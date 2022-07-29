@@ -238,11 +238,17 @@ main{
                     display: flex;
                     justify-content: center;
                     p{
+                        &.active {
+                            font-weight: bold;
+                        }
                         padding: 50px 10px 100px 10px;
+                        cursor: pointer;
                     }
                 }
             }
         }
+    
+    
     }
 }
 

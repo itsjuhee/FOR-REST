@@ -75,9 +75,15 @@ $.ajax({
 
         // thumnail
         function printFn(d){
-            let thumnail = '';
+            let thumnail = '',page=[];
+            let count = 0;
             $.each(d, function(k,thum){
+                if(count%16 == 0 && k){
+                    page.push(thumnail);
+                    thumnail='';
+                }
                 if(thum.firstImageUrl != undefined){
+                    count++;
                     thumnail += `<li data-code=${thum.contentId}>
                                     <div class="thum">
                                         <img src="${thum.firstImageUrl}" alt="thum-img">
@@ -90,11 +96,22 @@ $.ajax({
                                 </li>`;
                 }    
             })
-            $('.thumnail').html(thumnail);
+            $('.thumnail').html(page[0]);
+            $('.main-btn p').on('click', function(){
+                let pageNum = $(this).text();
+                
+                $('.thumnail').html(page[pageNum-1]);
+                $('.main-btn p').removeClass('active');
+                $(this).addClass('active');
+            })
         }
 
         printFn(data.response.body.items.item);
         
+        // popup
+        $('.thumnail li').on('click', function(){
+            popupSlide($(this).index());
+        });
 
         // 적용하기 버튼
         $('.main-wrap2 .filter .btn a:nth-of-type(1)').on('click', function(){
@@ -182,153 +199,154 @@ $.ajax({
             let mypage = [];
 
             // popup
-            function popupSlide (idx){
+            $('.thumnail li').on('click', function(){
+                popupSlide($(this).index());
+            });
+        })
 
-                let code = $('.thumnail li').eq(idx).data('code');
-                let pop = data.response.body.items.item.filter(num => num.contentId == code);
-    
-                let popup = `<div class="popup-all">
-                                <div class="popup">
-                                    <div class="close">닫기</div>
-                                    
-                                    <div class="popup-arrow">
-                                        <p class="arrow">오른쪽</p>
-                                        <p class="arrow">왼쪽</p>
-                                    </div>
-                                    <div class="m-img">
-                                        <img src="./resource/img/main-img.jpg">
-                                    </div>
+        // popup
+        function popupSlide (idx){
+
+            let code = $('.thumnail li').eq(idx).data('code');
+            let pop = data.response.body.items.item.filter(num => num.contentId == code);
+
+            let popup = `<div class="popup-all">
+                            <div class="popup">
+                                <div class="close">닫기</div>
                                 
-                                    <div class="p-main">
-                                        <div class="popup-txt">
-                                            <div class="popup-title">
-                                                <h3>${pop[0].facltNm}</h3>
-                                                <a class="heart1">하투</a>
-                                            </div>
-                                            <hr>
-                                
-                                            <div class="popup-main">
-                                                <div class="popup-left">
-                                                    <div class="popup-img">
-                                                        <img src="${pop[0].firstImageUrl}">
-                                                    </div>
+                                <div class="popup-arrow">
+                                    <p class="arrow">오른쪽</p>
+                                    <p class="arrow">왼쪽</p>
+                                </div>
+                                <div class="m-img">
+                                    <img src="./resource/img/main-img.jpg">
+                                </div>
                             
-                                                    <div class="left-txt">
-                                                        <h4>캠핑장소개</h4>
-                                                        <p>- ${pop[0].lineIntro}</p>
-                                                        <p>- 특징 : ${pop[0].featureNm}</p>
-                                                        <p>- 예약 구분 : ${pop[0].resveCl}</p>
-                                                        <p>- 반려동물 동반 가능 유무 : ${pop[0].animalCmgCl}</p>
-                                                    </div>
+                                <div class="p-main">
+                                    <div class="popup-txt">
+                                        <div class="popup-title">
+                                            <h3>${pop[0].facltNm}</h3>
+                                            <a class="heart1">하투</a>
+                                        </div>
+                                        <hr>
+                            
+                                        <div class="popup-main">
+                                            <div class="popup-left">
+                                                <div class="popup-img">
+                                                    <img src="${pop[0].firstImageUrl}">
                                                 </div>
-                                
-                                                <div class="popup-right">
+                        
+                                                <div class="left-txt">
+                                                    <h4>캠핑장소개</h4>
+                                                    <p>- ${pop[0].lineIntro}</p>
+                                                    <p>- 특징 : ${pop[0].featureNm}</p>
+                                                    <p>- 예약 구분 : ${pop[0].resveCl}</p>
+                                                    <p>- 반려동물 동반 가능 유무 : ${pop[0].animalCmgCl}</p>
+                                                </div>
+                                            </div>
                             
-                                                    <div class="right-txt">
-                                                        <h4>기본정보</h4>
-                                                        <div><p class="p">캠핑형태</p><span>${pop[0].induty}</span></div>
-                                                        <div><p class="p">환경</p><span>${pop[0].lctCl}</span></div>
-                                                        <div><p class="p">대표번호</p><span>${pop[0].tel}</span></div>
-                                                        <div><p class="p">사이트</p><span>${pop[0].homepage}</span></div>
-                                                        <div><p class="p">주소</p><span>${pop[0].addr1}</span></div>
-                                                        <div id="map" style="width: 100%; height: 197px;"></div>
-                                                    </div>
-                            
-                                                    <div class="right-txt">
-                                                        <h4>시설 및 레저</h4>
-                                                        <div class="inst">
-                                                            <div>
-                                                                <p class="p">기본시설</p>
-                                                                <p class="inst-wrap">샤워실 <span>${pop[0].swrmCo}</span>개</p>
-                                                                <p class="inst-wrap">화장실 <span>${pop[0].toiletCo}</span>개</p>
-                                                                <p class="inst-wrap">개수대 <span>${pop[0].wtrplCo}</span>개</p>
-                                                            </div>
+                                            <div class="popup-right">
+                        
+                                                <div class="right-txt">
+                                                    <h4>기본정보</h4>
+                                                    <div><p class="p">캠핑형태</p><span>${pop[0].induty}</span></div>
+                                                    <div><p class="p">환경</p><span>${pop[0].lctCl}</span></div>
+                                                    <div><p class="p">대표번호</p><span>${pop[0].tel}</span></div>
+                                                    <div><p class="p">사이트</p><span>${pop[0].homepage}</span></div>
+                                                    <div><p class="p">주소</p><span>${pop[0].addr1}</span></div>
+                                                    <div id="map" style="width: 100%; height: 197px;"></div>
+                                                </div>
+                        
+                                                <div class="right-txt">
+                                                    <h4>시설 및 레저</h4>
+                                                    <div class="inst">
+                                                        <div>
+                                                            <p class="p">기본시설</p>
+                                                            <p class="inst-wrap">샤워실 <span>${pop[0].swrmCo}</span>개</p>
+                                                            <p class="inst-wrap">화장실 <span>${pop[0].toiletCo}</span>개</p>
+                                                            <p class="inst-wrap">개수대 <span>${pop[0].wtrplCo}</span>개</p>
                                                         </div>
-                                                        <div><p class="p">부대시설</p><span>${pop[0].sbrsCl}</span></div>
-                                                        <div><p class="p">인근레저</p><span>${pop[0].posblFcltyCl}</span></div>
                                                     </div>
+                                                    <div><p class="p">부대시설</p><span>${pop[0].sbrsCl}</span></div>
+                                                    <div><p class="p">인근레저</p><span>${pop[0].posblFcltyCl}</span></div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>`;
+                            </div>
+                        </div>`;
 
-                // change map address
-                let mapLocation = `${pop[0].addr1}`;
-                
-                $('.popup-shadow').html(popup);
-                $('.popup-shadow').addClass('active');
-    
-                // map
-                var mapContainer = document.getElementById('map'),
-                mapOption = {
-                    center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-                    level: 3 // 지도의 확대 레벨
-                };  
-    
-                var map = new kakao.maps.Map(mapContainer, mapOption); 
-    
-                var geocoder = new kakao.maps.services.Geocoder();
-    
-                geocoder.addressSearch(mapLocation, function(result, status) {
-    
-                    // 정상적으로 검색이 완료됐으면 
-                    if (status === kakao.maps.services.Status.OK) {
-    
-                        var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
-    
-                        // 결과값으로 받은 위치를 마커로 표시합니다
-                        var marker = new kakao.maps.Marker({
-                            map: map,
-                            position: coords
-                        });
-    
-                        kakao.maps.event.addListener(marker, 'click', function () {
-                            var adress_name = result[0].road_address.address_name;
-                            var url = `https://map.kakao.com/link/search/${adress_name}`;
-                            window.open(url, '_blank');
-                        });
-                        // infowindow.open(map, marker);
-    
-                        // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
-                        map.setCenter(coords);
-                    } 
-                });
+            // change map address
+            let mapLocation = `${pop[0].addr1}`;
+            
+            $('.popup-shadow').html(popup);
+            $('.popup-shadow').addClass('active');
 
-                // heart
-                $('.heart1').on('click', function(a,b){
+            // map
+            var mapContainer = document.getElementById('map'),
+            mapOption = {
+                center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                level: 3 // 지도의 확대 레벨
+            };  
 
-                    $(this).toggleClass('active');
-                    
-                    // localStorage
-                    if($(this).hasClass('active')) {
-                        mypage.push(code);
-                        localStorage.setItem('heart', mypage);
-                    }
-                    console.log(mypage)
-                })
-                
-                // popup arrow
-                $('.popup-arrow .arrow').eq(0).on('click', function(){
-                    if(idx>0) idx--;
-                    popupSlide(idx);
-                })
-                $('.popup-arrow .arrow').eq(1).on('click', function(){
-                    if(idx<8) idx++;
-                    popupSlide(idx);
-                })
+            var map = new kakao.maps.Map(mapContainer, mapOption); 
 
-                // popup close
-                $('.close').on('click', function(){
-                    $('.popup-shadow').removeClass('active');
-                });
-            }
+            var geocoder = new kakao.maps.services.Geocoder();
 
-            $('.thumnail li').on('click', function(){
-                popupSlide($(this).index());
+            geocoder.addressSearch(mapLocation, function(result, status) {
+
+                // 정상적으로 검색이 완료됐으면 
+                if (status === kakao.maps.services.Status.OK) {
+
+                    var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+
+                    // 결과값으로 받은 위치를 마커로 표시합니다
+                    var marker = new kakao.maps.Marker({
+                        map: map,
+                        position: coords
+                    });
+
+                    kakao.maps.event.addListener(marker, 'click', function () {
+                        var adress_name = result[0].road_address.address_name;
+                        var url = `https://map.kakao.com/link/search/${adress_name}`;
+                        window.open(url, '_blank');
+                    });
+                    // infowindow.open(map, marker);
+
+                    // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+                    map.setCenter(coords);
+                } 
             });
-        })
+
+            // heart
+            $('.heart1').on('click', function(a,b){
+
+                $(this).toggleClass('active');
+                
+                // localStorage
+                if($(this).hasClass('active')) {
+                    mypage.push(code);
+                    localStorage.setItem('heart', mypage);
+                }
+                console.log(mypage)
+            })
+            
+            // popup arrow
+            $('.popup-arrow .arrow').eq(0).on('click', function(){
+                if(idx>0) idx--;
+                popupSlide(idx);
+            })
+            $('.popup-arrow .arrow').eq(1).on('click', function(){
+                if(idx<8) idx++;
+                popupSlide(idx);
+            })
+
+            // popup close
+            $('.close').on('click', function(){
+                $('.popup-shadow').removeClass('active');
+            });
+        }
     }
 });
 

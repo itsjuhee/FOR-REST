@@ -719,6 +719,10 @@ main .main-wrap .main-wrap2 .main .main-btn {
 }
 main .main-wrap .main-wrap2 .main .main-btn p {
   padding: 50px 10px 100px 10px;
+  cursor: pointer;
+}
+main .main-wrap .main-wrap2 .main .main-btn p.active {
+  font-weight: bold;
 }
 
 @media (max-width: 1060px) {
