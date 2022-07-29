@@ -99,8 +99,12 @@ $.ajax({
             $('.thumnail').html(page[0]);
             $('.main-btn p').on('click', function(){
                 let pageNum = $(this).text();
-                
+
                 $('.thumnail').html(page[pageNum-1]);
+                $('.thumnail li').on('click', function(){
+                    popupSlide($(this).index());
+                });
+        
                 $('.main-btn p').removeClass('active');
                 $(this).addClass('active');
             })
