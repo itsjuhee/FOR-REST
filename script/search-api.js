@@ -1,6 +1,8 @@
 let data;
 let doNm = new Set();
 
+let mypage = [];
+
 // function abc(e,d){
 //     console.log(d);
 // }
@@ -200,7 +202,7 @@ $.ajax({
             if($('.main-wrap .title span').html(dd.length)) $('.main-wrap .title p').addClass('active')
 
             printFn(dd);
-            let mypage = [];
+
 
             // popup
             $('.thumnail li').on('click', function(){
